@@ -668,9 +668,7 @@
   </ul>
 </nav>
 
-<!-- ============================================================ -->
 <!-- HOME PAGE -->
-<!-- ============================================================ -->
 <div class="page active" id="home">
   <div class="hero">
     <div class="hero-content">
@@ -684,7 +682,6 @@
     </div>
   </div>
 
-  <!-- Featured Recipes -->
   <div class="section">
     <p class="hero-label" style="color:var(--rust);font-size:0.8rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:0.5rem;">— Featured Recipes</p>
     <h2 class="section-title">Dishes Worth Making</h2>
@@ -692,7 +689,6 @@
     <div class="recipes-grid" id="home-recipes"></div>
   </div>
 
-  <!-- Categories -->
   <div class="section" style="background:var(--warm);padding:4rem 5%;">
     <h2 class="section-title">Explore by Category</h2>
     <p class="section-subtitle">Whatever you're craving, we've got you covered.</p>
@@ -706,7 +702,6 @@
     </div>
   </div>
 
-  <!-- Newsletter -->
   <div class="section" style="text-align:center;">
     <h2 class="section-title">Stay Inspired</h2>
     <p class="section-subtitle">Get weekly recipes, cooking tips, and seasonal ideas delivered to your inbox.</p>
@@ -717,9 +712,7 @@
   </div>
 </div>
 
-<!-- ============================================================ -->
 <!-- ABOUT PAGE -->
-<!-- ============================================================ -->
 <div class="page" id="about">
   <div class="about-hero">
     <div class="about-img">
@@ -773,9 +766,7 @@
   </div>
 </div>
 
-<!-- ============================================================ -->
 <!-- BLOGS PAGE -->
-<!-- ============================================================ -->
 <div class="page" id="blogs">
   <div class="blog-hero">
     <h1>Our <span>Kitchen</span> Stories</h1>
@@ -788,9 +779,7 @@
   <div class="blogs-grid" id="blogs-grid"></div>
 </div>
 
-<!-- ============================================================ -->
 <!-- CONTACT PAGE -->
-<!-- ============================================================ -->
 <div class="page" id="contact">
   <div class="contact-hero">
     <h1>Get in <span>Touch</span></h1>
@@ -829,9 +818,7 @@
   </div>
 </div>
 
-<!-- ============================================================ -->
 <!-- MODALS -->
-<!-- ============================================================ -->
 
 <!-- BLOG POST MODAL -->
 <div class="modal-overlay" id="blog-modal">
@@ -887,19 +874,9 @@
       <button class="btn-admin" onclick="addBlogFromText()" style="margin-top:1rem;">Publish Blog Post</button>
     </div>
     <div id="editor-code" style="display:none;">
-      <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1rem;">Paste a complete blog object as JSON or HTML content. The system will parse and add it to the blog list.</p>
+      <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1rem;">Paste a complete blog object as JSON or HTML content.</p>
       <div class="code-editor">
-        <textarea id="code-input" placeholder='// Paste JSON blog object here:
-{
-  "title": "Your Blog Title",
-  "category": "Category",
-  "image": "https://...",
-  "excerpt": "Short description...",
-  "content": "<p>Full content with HTML...</p>",
-  "meta": "Author • Date",
-  "date": "Jan 2025",
-  "readTime": "10 min read"
-}'></textarea>
+        <textarea id="code-input" placeholder='// Paste JSON blog object here:'></textarea>
       </div>
       <button class="btn-admin" onclick="addBlogFromCode()" style="margin-top:1.5rem;">Parse & Publish</button>
     </div>
@@ -932,7 +909,7 @@
   <div class="login-box" style="max-width:500px;">
     <button class="modal-close" onclick="closeModal('page-edit-modal')" style="position:absolute;top:1rem;right:1rem;">✕</button>
     <h2 style="font-family:'Playfair Display',serif;">Edit This Page</h2>
-    <p style="color:var(--muted);margin-top:0.5rem;margin-bottom:1.5rem;">Select an element on the page to edit its text content. Admin mode active.</p>
+    <p style="color:var(--muted);margin-top:0.5rem;margin-bottom:1.5rem;">Select an element on the page to edit its text content.</p>
     <div class="form-group"><label>Element CSS Selector</label><input type="text" id="pe-selector" placeholder=".hero-title, #some-id, p.class"></div>
     <div class="form-group"><label>New Content (HTML supported)</label><textarea id="pe-content" rows="5"></textarea></div>
     <button class="btn-admin" onclick="applyPageEdit()" style="margin-top:0.5rem;">Apply Edit</button>
@@ -949,10 +926,12 @@ const blogs = [
     category: "Italian Cuisine",
     image: "https://images.unsplash.com/photo-1551183053-bf91798d792c?w=800&q=80",
     excerpt: "Unlock the ancient Italian art of handmade pasta — from flour selection to the perfect dough texture that separates good pasta from extraordinary pasta.",
-    meta: "Elena Marchetti • January 15, 2025",
-    date: "Jan 2025",
+    meta: "Maria Kanwal • January 15, 2026",
+    date: "Jan 2026",
     readTime: "9 min read",
-    content: `<p>There is something deeply meditative about making pasta by hand. Long before food processors and electric mixers, Italian grandmothers were coaxing silky ribbons of dough from nothing more than flour and eggs. And while modern appliances can replicate much of what they did, they can never fully reproduce the intuitive feel, the tactile wisdom, of hands that have shaped thousands of portions of pasta over a lifetime.</p>
+    content: `<img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=900&q=80" alt="Fresh homemade pasta dough on wooden board" style="width:100%;border-radius:14px;margin:0 0 2rem;object-fit:cover;max-height:360px;">
+    <p>There is something deeply meditative about making pasta by hand. Long before food processors and electric mixers, Italian grandmothers were coaxing silky ribbons of dough from nothing more than flour and eggs. And while modern appliances can replicate much of what they did, they can never fully reproduce the intuitive feel, the tactile wisdom, of hands that have shaped thousands of portions of pasta over a lifetime.</p>
+    <img src="https://images.unsplash.com/photo-1607787522-2cce82e4ee23?w=900&q=80" alt="Italian 00 flour and semolina for fresh pasta" style="width:100%;border-radius:14px;margin:1.5rem 0;object-fit:cover;max-height:280px;">
     <h2>Choosing the Right Flour</h2>
     <p>The foundation of extraordinary pasta is flour. Most Italian home cooks reach for "00" flour — a finely milled wheat flour with a silky texture that creates a supple, elastic dough. The double-zero designation refers to the grind size, not the protein content, though most 00 flours available for pasta-making fall in the 9–12% protein range. Higher protein means more gluten development, which means more chew and structure in your final pasta.</p>
     <p>Semolina flour, milled from durum wheat, brings a golden hue and a slightly coarser texture to pasta dough. Many traditional southern Italian pasta shapes — orecchiette, cavatelli, strozzapreti — are made entirely from semolina and water, without egg. Blending semolina with 00 flour (a common ratio is 50:50 or 70:30) gives pasta a beautiful balance of tenderness and bite.</p>
@@ -965,9 +944,11 @@ const blogs = [
     <p>Once you have a rough, shaggy dough, abandon the fork and begin kneading with the heel of your hand. Push the dough away, fold it back, rotate a quarter turn, and repeat. The dough will be rough and a bit sticky at first. After five minutes, it will become noticeably smoother. After ten minutes, it should be completely smooth, slightly tacky, and elastic — it will spring back slowly when you poke it.</p>
     <h2>The Importance of Rest</h2>
     <p>Wrap your kneaded dough tightly in plastic wrap and let it rest at room temperature for at least 30 minutes. This is not optional. During this rest, the gluten network that formed during kneading relaxes, making the dough much easier to roll. Without rest, the dough will fight you — it will keep springing back as you try to roll it thin, and it will tear rather than stretch.</p>
+    <img src="https://images.unsplash.com/photo-1589297702854-00e96e1dfb72?w=900&q=80" alt="Rolling fresh pasta dough by hand with rolling pin" style="width:100%;border-radius:14px;margin:1.5rem 0;object-fit:cover;max-height:280px;">
     <h2>Rolling and Shaping</h2>
     <p>Divide your dough into portions (roughly the size of a golf ball each) and keep the rest covered while you work. Begin rolling with a rolling pin, turning the dough a quarter turn after each pass and applying even pressure. For pasta that will be filled (like ravioli or tortellini), aim for a thickness where you can just barely see your hand through the dough — about 1–2mm. For cut pasta like tagliatelle or pappardelle, 2–3mm gives good texture.</p>
     <p>If you have a pasta machine, use it with pride. Feed the dough through the widest setting twice, then progressively narrow the setting with each pass. Dust lightly with flour between passes to prevent sticking. The machine produces an evenness of thickness that is genuinely difficult to achieve by hand.</p>
+    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=900&q=80" alt="Cooking fresh pasta in boiling salted water" style="width:100%;border-radius:14px;margin:1.5rem 0;object-fit:cover;max-height:280px;">
     <h2>Cooking Fresh Pasta</h2>
     <p>Fresh pasta cooks dramatically faster than dried. Bring a large pot of well-salted water to a rolling boil (the water should taste like the sea), add your pasta, and begin tasting after just 60–90 seconds. Fresh pasta is done when it is tender but still offers slight resistance when you bite through it — what the Italians call "al dente." Drain immediately, reserving a cup of starchy cooking water to add to your sauce for a silky, cohesive finish.</p>
 
@@ -1008,47 +989,22 @@ const blogs = [
     content: `<p>In 1833, the legendary French chef Marie-Antoine Carême codified what he believed were the four foundational sauces of French cuisine. A century later, Auguste Escoffier revised and expanded this list, arriving at five "mother sauces" — sauces from which an entire universe of "daughter sauces" can be derived. Understanding these five sauces doesn't just teach you recipes; it teaches you to think like a professional cook, to understand flavor, texture, and technique at a fundamental level.</p>
     <h2>1. Béchamel — The White Sauce</h2>
     <p>Béchamel is perhaps the most universally familiar mother sauce: a simple mixture of butter, flour, and milk. Making a roux (cooking butter and flour together) creates a starchy base that thickens the milk as it heats. The key is patience: whisk constantly and add the milk gradually to prevent lumps.</p>
-    <p>From béchamel, you can create Mornay sauce (with added cheese, perfect for mac and cheese or croque monsieur), Soubise (with onion purée), Nantua (with crayfish butter), and cream sauce (with added cream and reduction). Béchamel is also the base for moussaka, lasagna filling, and croque madame.</p>
     <h2>2. Velouté — The Blond Sauce</h2>
-    <p>Velouté (from the French word for "velvety") is a light stock thickened with a roux. The key difference from béchamel is the liquid: instead of milk, velouté uses a light, flavorful stock — chicken, fish, or veal, depending on the application. A chicken velouté has a clean, savory depth that milk cannot provide.</p>
-    <p>Daughter sauces include Suprême (velouté enriched with cream), Allemande (velouté with egg yolk liaison), and Normande (fish velouté with cream and mushrooms). Velouté is the starting point for pot pie gravy, creamy chicken dishes, and many elegant French sauces.</p>
+    <p>Velouté (from the French word for "velvety") is a light stock thickened with a roux. The key difference from béchamel is the liquid: instead of milk, velouté uses a light, flavorful stock — chicken, fish, or veal, depending on the application.</p>
     <h2>3. Espagnole — The Brown Sauce</h2>
-    <p>Espagnole is the most complex of the mother sauces, made from a dark brown roux, mirepoix (onion, carrot, celery), tomato paste, and a rich brown veal stock. The sauce is then simmered for hours and typically reduced further with additional stock and wine to create the classic "demi-glace" — a deeply rich, concentrated brown sauce with incredible savory depth.</p>
-    <p>From espagnole and demi-glace come Bordelaise (with red wine and bone marrow), Chasseur (with mushrooms and tomato), Madeira (with fortified wine), and Robert (with mustard and cornichons). These sauces grace the greatest steaks, braised meats, and game dishes in French cuisine.</p>
+    <p>Espagnole is the most complex of the mother sauces, made from a dark brown roux, mirepoix, tomato paste, and a rich brown veal stock. The sauce is simmered for hours and typically reduced to create demi-glace.</p>
     <h2>4. Sauce Tomat — The Tomato Sauce</h2>
-    <p>Unlike its Italian cousin, French tomato sauce is richer and more structured, often thickened with a small amount of roux and made with salt pork, mirepoix, and a proper stock alongside the tomatoes. The result is a more savory, deeply layered sauce than a simple Italian tomato preparation.</p>
-    <p>Daughter sauces include Portugaise (with onion and garlic), Provençale (with herbs and olive oil), and Milanaise (with ham and mushrooms). Sauce tomat is the base for classic tomato-braised dishes, fish in tomato broth, and traditional French-style ratatouille.</p>
+    <p>Unlike its Italian cousin, French tomato sauce is richer and more structured, often thickened with a small amount of roux and made with salt pork, mirepoix, and proper stock alongside the tomatoes.</p>
     <h2>5. Hollandaise — The Emulsified Butter Sauce</h2>
-    <p>Hollandaise is the most technically demanding of the mother sauces — an emulsion of egg yolks and clarified butter, stabilized with acid (lemon juice or white wine vinegar). The sauce must be made over gentle heat, whisking constantly to prevent the yolks from scrambling while gradually adding butter to create a stable, creamy emulsion.</p>
-    <p>Daughter sauces include Béarnaise (with tarragon and shallot reduction), Choron (béarnaise with tomato), Maltaise (with blood orange), and Mousseline (with whipped cream folded in). These buttery, rich sauces are the natural companions for eggs Benedict, grilled fish, asparagus, and beef tenderloin.</p>
-    <h2>Why These Sauces Matter Today</h2>
-    <p>In an era of quick weeknight meals and simplicity, it might seem that mastering Escoffier's mother sauces is an academic exercise. But understanding these foundations fundamentally changes how you cook. A cook who understands velouté intuitively knows how to make any cream-based sauce silky and stable. A cook who understands espagnole knows why pan drippings are precious and how to build a braising liquid that will reduce to something magnificent.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>The 5 mother sauces are Béchamel, Velouté, Espagnole, Sauce Tomat, and Hollandaise</li>
-        <li>Each mother sauce uses different liquids — milk, stock, tomato, or butter</li>
-        <li>Roux (butter + flour) is the thickening agent in 4 of the 5 mother sauces</li>
-        <li>Hundreds of classic "daughter sauces" are derived from the five mothers</li>
-        <li>Understanding mother sauces gives you a framework to invent new sauces confidently</li>
-        <li>Hollandaise is an emulsion — temperature control is critical to its success</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>The mother sauces are not relics of a fusty culinary past — they are a living framework for understanding how flavor, texture, and technique interact. Spending a weekend systematically cooking through all five, and then exploring their daughters, will teach you more about cooking than any recipe collection can. Start with béchamel, the most forgiving, and work your way to hollandaise, the most demanding. By the end, you will cook with a confidence and fluency that no single recipe can provide.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a roux and why is it important? <span>+</span></div><div class="faq-a">A roux is equal parts butter and flour cooked together. The starch granules in the flour are coated by fat, which allows them to absorb liquid and swell uniformly without forming lumps. Cooking the roux longer creates darker, more flavor-forward roux used in gumbo and espagnole.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">My hollandaise keeps breaking — what am I doing wrong? <span>+</span></div><div class="faq-a">Hollandaise breaks when it gets too hot or when butter is added too quickly. Use gentle heat (a double boiler is safest), add butter drop by drop at first, and take the pan off heat if it feels too warm. Whisking in a teaspoon of warm water can rescue a slightly broken sauce.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I make demi-glace at home? <span>+</span></div><div class="faq-a">Yes, but it takes time. Start with good brown veal stock (roast the bones first for color), make espagnole, then reduce it with more stock by half. The process takes 4–6 hours but can be frozen in ice cube trays for use throughout the year.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are the main daughter sauces of hollandaise? <span>+</span></div><div class="faq-a">The most important daughter sauces are Béarnaise (tarragon and shallot reduction), Maltaise (blood orange juice), Mousseline (folded with stiff whipped cream), and Choron (with tomato concassé added to béarnaise).</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do modern chefs still use mother sauces? <span>+</span></div><div class="faq-a">Yes, though often in evolved or simplified forms. The principles behind the mother sauces — emulsification, roux thickening, stock reduction — are applied every day in professional kitchens, even when the names aren't used.</div></div>
-    </div>`
+    <p>Hollandaise is the most technically demanding — an emulsion of egg yolks and clarified butter, stabilized with acid. The sauce must be made over gentle heat, whisking constantly to prevent the yolks from scrambling.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>The 5 mother sauces are Béchamel, Velouté, Espagnole, Sauce Tomat, and Hollandaise</li><li>Each mother sauce uses different liquids — milk, stock, tomato, or butter</li><li>Roux (butter + flour) is the thickening agent in 4 of the 5 mother sauces</li><li>Hundreds of classic "daughter sauces" are derived from the five mothers</li><li>Understanding mother sauces gives you a framework to invent new sauces confidently</li><li>Hollandaise is an emulsion — temperature control is critical to its success</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>The mother sauces are not relics of a fusty culinary past — they are a living framework for understanding how flavor, texture, and technique interact. Spending a weekend systematically cooking through all five will teach you more about cooking than any recipe collection can.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a roux and why is it important? <span>+</span></div><div class="faq-a">A roux is equal parts butter and flour cooked together. The starch granules in the flour are coated by fat, which allows them to absorb liquid and swell uniformly without forming lumps.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">My hollandaise keeps breaking — what am I doing wrong? <span>+</span></div><div class="faq-a">Hollandaise breaks when it gets too hot or when butter is added too quickly. Use gentle heat (a double boiler is safest), add butter drop by drop at first, and take the pan off heat if it feels too warm.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I make demi-glace at home? <span>+</span></div><div class="faq-a">Yes, but it takes time. Start with good brown veal stock, make espagnole, then reduce it with more stock by half. The process takes 4–6 hours but can be frozen in ice cube trays.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are the main daughter sauces of hollandaise? <span>+</span></div><div class="faq-a">The most important daughter sauces are Béarnaise (tarragon and shallot reduction), Maltaise (blood orange juice), Mousseline (folded with stiff whipped cream), and Choron (with tomato concassé).</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do modern chefs still use mother sauces? <span>+</span></div><div class="faq-a">Yes, though often in evolved or simplified forms. The principles behind the mother sauces — emulsification, roux thickening, stock reduction — are applied every day in professional kitchens.</div></div></div>`
   },
   {
     title: "The Complete Guide to Sourdough Bread",
@@ -1058,48 +1014,22 @@ const blogs = [
     meta: "Elena Marchetti • March 2025",
     date: "Mar 2025",
     readTime: "14 min read",
-    content: `<p>Sourdough bread is arguably the most complex, most rewarding, and most ancient form of baking. Before commercial yeast existed, every loaf of bread was a sourdough loaf — leavened by wild yeasts and bacteria naturally present in the flour and the surrounding environment. The result was not just bread; it was a living, breathing, evolving food that developed flavor through time and microbial activity in ways that fast-risen commercial bread simply cannot replicate.</p>
+    content: `<p>Sourdough bread is arguably the most complex, most rewarding, and most ancient form of baking. Before commercial yeast existed, every loaf of bread was a sourdough loaf — leavened by wild yeasts and bacteria naturally present in the flour and the surrounding environment.</p>
     <h2>Understanding the Starter</h2>
-    <p>A sourdough starter is a fermented culture of flour and water that contains wild yeasts and lactic acid bacteria. The yeasts produce CO2 gas that makes the bread rise; the bacteria produce acids (lactic and acetic) that give sourdough its distinctive tang and extend its shelf life. A healthy starter is alive, active, and hungry — it needs regular feeding (adding fresh flour and water) to stay vigorous.</p>
-    <p>Creating a starter from scratch takes approximately 7–14 days. Mix 50g whole wheat or rye flour with 50g water at room temperature. Leave uncovered for 24 hours, then discard all but 50g and feed with fresh flour and water again. Repeat daily. By day 5–7, you should see bubbles forming. By day 10–14, your starter should reliably double in size within 4–8 hours of feeding.</p>
-    <h2>Flour Selection for Sourdough</h2>
-    <p>Bread flour (higher protein, typically 12–14%) gives sourdough the structural strength to trap the CO2 produced by fermentation and produce a well-risen loaf with a chewy, open crumb. Whole wheat and rye flours add enzymes, minerals, and fiber that feed the microorganisms in your starter and contribute complex flavor. A blend of 80% bread flour with 20% whole wheat is a classic starting point.</p>
+    <p>A sourdough starter is a fermented culture of flour and water that contains wild yeasts and lactic acid bacteria. Creating a starter from scratch takes approximately 7–14 days. Mix 50g whole wheat or rye flour with 50g water at room temperature. Leave uncovered for 24 hours, then discard all but 50g and feed with fresh flour and water again.</p>
     <h2>The Autolyse Method</h2>
-    <p>Before adding your starter, combine your flour and most of your water and let them rest for 30–60 minutes. This technique, called autolyse, allows the flour to fully hydrate and the gluten to begin developing without any mechanical effort. The dough will feel noticeably smoother and more cohesive after autolyse, making subsequent development much easier.</p>
+    <p>Before adding your starter, combine your flour and most of your water and let them rest for 30–60 minutes. This allows the flour to fully hydrate and the gluten to begin developing without any mechanical effort.</p>
     <h2>Bulk Fermentation</h2>
-    <p>After adding the starter (and salt) to your autolysed dough, bulk fermentation begins. This is the period during which the yeast and bacteria do their work, producing CO2 and flavor compounds. At room temperature (around 75°F/24°C), bulk fermentation typically takes 4–6 hours. During this time, you'll perform a series of stretch-and-fold cycles (every 30 minutes for the first 2 hours) to strengthen the dough's gluten network without aggressive kneading.</p>
-    <h2>Shaping and Cold Proofing</h2>
-    <p>Once your dough has increased by 50–75% and shows signs of activity (bubbles throughout, a domed surface), it's ready to shape. Pre-shape the dough into a loose round, rest for 20–30 minutes, then perform a final shape — folding the dough tightly into either a round (boule) or oval (batard) form and placing it seam-side-up in a floured proofing basket (banneton). Then comes cold proofing: the shaped dough spends 8–16 hours in the refrigerator, where fermentation slows dramatically, flavor develops further, and the gluten firms up for easier scoring.</p>
+    <p>After adding the starter and salt, bulk fermentation begins. At room temperature (around 75°F/24°C), bulk fermentation typically takes 4–6 hours, with stretch-and-fold cycles every 30 minutes for the first 2 hours.</p>
     <h2>Baking in a Dutch Oven</h2>
-    <p>Preheat your oven to 500°F (260°C) with a Dutch oven inside. The covered pot creates a steam environment essential for achieving a thin, crackly crust and maximum oven spring (the final rise as the bread hits high heat). Score the cold dough with a razor blade just before loading — this controls where the bread expands. Bake covered for 20 minutes, then remove the lid and bake for another 20–25 minutes until the crust is deeply caramelized.</p>
-    <h2>The Waiting Game</h2>
-    <p>Once your loaf is out of the oven, resist cutting into it for at least 2 hours. The crumb continues setting as steam distributes through the interior. Cut too soon and you'll find a gummy, half-set crumb. Wait, and you'll be rewarded with an open, airy, glossy crumb and a crust that shatters beautifully under the knife.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>A sourdough starter takes 7–14 days to establish from scratch</li>
-        <li>Autolyse (resting flour and water before adding starter) develops gluten effortlessly</li>
-        <li>Bulk fermentation at room temperature takes 4–6 hours with stretch-and-fold cycles</li>
-        <li>Cold proofing in the fridge develops flavor and firms dough for scoring</li>
-        <li>Bake in a covered Dutch oven for maximum oven spring and crust development</li>
-        <li>Rest the baked loaf for 2 hours before slicing — the crumb needs time to set</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Sourdough is not a quick project — it is a practice. Your first loaf may be dense. Your second might spread too much. By your fifth or sixth, you will begin to read the dough intuitively, to know by touch and smell when the fermentation is right. Every baker who persists through the learning curve eventually arrives at a loaf that makes them stop and stare with quiet disbelief that they made this. That moment makes every failed loaf worthwhile.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I know if my starter is ready to bake with? <span>+</span></div><div class="faq-a">Perform the float test: drop a teaspoon of starter into water. If it floats, it's full of CO2 and ready to use. Also look for at least a doubling in size within 4–8 hours of feeding and a domed top with bubbles throughout.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why is my sourdough too dense? <span>+</span></div><div class="faq-a">Common causes include underfermentation (dough hasn't risen enough), a weak starter, insufficient dough strength (not enough folds), or baking too early. Give more time at bulk fermentation and ensure your starter doubles reliably before using.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I use all-purpose flour instead of bread flour? <span>+</span></div><div class="faq-a">Yes, but the result will be slightly less chewy and may not rise as dramatically due to lower protein content. Add 10–15% whole wheat flour to compensate with extra enzyme activity.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I store sourdough bread? <span>+</span></div><div class="faq-a">Store at room temperature, cut-side-down on a board, for 3–4 days. Never refrigerate sourdough — it stales rapidly in the fridge. For longer storage, slice and freeze, then toast directly from frozen.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How often do I need to feed my starter? <span>+</span></div><div class="faq-a">If kept at room temperature, feed once or twice daily. If refrigerated, once a week is sufficient. Always bring the starter to room temperature and feed 2–3 times before using it in a recipe after refrigeration.</div></div>
-    </div>`
+    <p>Preheat your oven to 500°F (260°C) with a Dutch oven inside. Score the cold dough with a razor blade just before loading. Bake covered for 20 minutes, then remove the lid and bake for another 20–25 minutes until the crust is deeply caramelized.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>A sourdough starter takes 7–14 days to establish from scratch</li><li>Autolyse (resting flour and water before adding starter) develops gluten effortlessly</li><li>Bulk fermentation at room temperature takes 4–6 hours with stretch-and-fold cycles</li><li>Cold proofing in the fridge develops flavor and firms dough for scoring</li><li>Bake in a covered Dutch oven for maximum oven spring and crust development</li><li>Rest the baked loaf for 2 hours before slicing — the crumb needs time to set</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Sourdough is not a quick project — it is a practice. Your first loaf may be dense. By your fifth or sixth, you will begin to read the dough intuitively. Every baker who persists through the learning curve eventually arrives at a loaf that makes them stop and stare with quiet disbelief that they made this.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I know if my starter is ready to bake with? <span>+</span></div><div class="faq-a">Perform the float test: drop a teaspoon of starter into water. If it floats, it's full of CO2 and ready to use. Also look for at least a doubling in size within 4–8 hours of feeding.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why is my sourdough too dense? <span>+</span></div><div class="faq-a">Common causes include underfermentation, a weak starter, insufficient dough strength, or baking too early. Give more time at bulk fermentation and ensure your starter doubles reliably before using.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I store sourdough bread? <span>+</span></div><div class="faq-a">Store at room temperature, cut-side-down on a board, for 3–4 days. Never refrigerate sourdough — it stales rapidly in the fridge. For longer storage, slice and freeze, then toast directly from frozen.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How often do I need to feed my starter? <span>+</span></div><div class="faq-a">If kept at room temperature, feed once or twice daily. If refrigerated, once a week is sufficient. Always bring the starter to room temperature and feed 2–3 times before using it in a recipe after refrigeration.</div></div></div>`
   },
   {
     title: "Thai Street Food at Home: A Complete Guide",
@@ -1109,44 +1039,18 @@ const blogs = [
     meta: "Aisha Okonkwo • April 2025",
     date: "Apr 2025",
     readTime: "10 min read",
-    content: `<p>Thai street food is a study in contrasts and harmonies: sweet, sour, spicy, salty, and umami existing together in a single dish. The street vendors of Bangkok, Chiang Mai, and Phuket have spent lifetimes perfecting these balances, working over scorching woks with practiced speed. Bringing this food home requires understanding not technique alone, but the philosophy behind these flavors — why fish sauce and lime juice work so well together, why fresh herbs are added last, why the wok's high heat is not just preferred but essential.</p>
+    content: `<p>Thai street food is a study in contrasts and harmonies: sweet, sour, spicy, salty, and umami existing together in a single dish. The street vendors of Bangkok, Chiang Mai, and Phuket have spent lifetimes perfecting these balances.</p>
     <h2>The Thai Pantry Essentials</h2>
-    <p>Before you cook a single dish, you need to stock your pantry. Fish sauce (nam pla) is the backbone of Thai savory cooking — a salty, umami-rich condiment made from fermented fish that adds depth without obvious fishiness when used correctly. Thai soy sauce (both light, salty and dark, sweet) adds color and complexity. Palm sugar (or light brown sugar as a substitute) brings rounded, caramel sweetness that balances heat and acid.</p>
-    <p>Fresh aromatics are equally important: galangal (different from ginger — earthier and more medicinal), lemongrass (bruised and cut to release its citrus oils), makrut lime leaves (with their distinctive double-leaf structure and intense fragrance), Thai basil, fresh turmeric, and multiple chili varieties (bird's eye for heat, dried chilies for smokier depth). Keep these in your refrigerator and freezer, as many freeze well without losing much flavor.</p>
+    <p>Fish sauce (nam pla) is the backbone of Thai savory cooking. Thai soy sauce adds color and complexity. Palm sugar brings rounded, caramel sweetness that balances heat and acid. Fresh aromatics — galangal, lemongrass, makrut lime leaves, Thai basil — are equally important.</p>
     <h2>Pad Thai: The National Dish</h2>
-    <p>Pad Thai's origin story is more political than culinary — the dish was promoted in the 1930s and 40s as a national dish by Prime Minister Phibun Songkhram. But its staying power is entirely culinary: stir-fried rice noodles with the perfect balance of tamarind, fish sauce, and palm sugar, tossed with egg, tofu or shrimp, bean sprouts, and scallions, then finished with crushed peanuts and fresh lime.</p>
-    <p>The key to restaurant-quality pad thai at home is wok hei — the slightly charred, smoky quality that comes from cooking over very high heat with minimal liquid. Your home stove may not reach the BTUs of a professional wok burner, but you can compensate by cooking in smaller batches so the pan doesn't lose heat, and by ensuring all ingredients are dry before they hit the wok.</p>
+    <p>Pad Thai's staying power is entirely culinary: stir-fried rice noodles with the perfect balance of tamarind, fish sauce, and palm sugar, tossed with egg, tofu or shrimp, bean sprouts, and scallions, then finished with crushed peanuts and fresh lime.</p>
     <h2>Green Curry: The Art of the Paste</h2>
-    <p>Green curry paste is made by pounding galangal, lemongrass, kaffir lime peel, green chilies, shallots, garlic, coriander root, cumin, and shrimp paste together in a mortar until completely smooth. Store-bought paste is a workable shortcut, but homemade paste — even if you use a food processor rather than a traditional mortar — is brighter, more fragrant, and more vivid in both color and flavor.</p>
-    <p>Fry the paste in coconut cream (the thick layer that forms at the top of an unshaken can) until the oil splits from the solids and the paste becomes fragrant and slightly darkened. This "cracking" of the coconut cream is what concentrates and deepens the curry. Add the rest of the coconut milk, your protein, vegetables, fish sauce, and palm sugar. Finish with makrut lime leaves torn to release their oils, and fresh Thai basil added off the heat.</p>
-    <h2>Som Tam: Green Papaya Salad</h2>
-    <p>Som tam is a study in Thai flavor balance made visible. In a large mortar, pound garlic and chilies to a rough paste. Add dried shrimp, palm sugar, fish sauce, and lime juice — pounding and tasting to adjust the balance until you achieve a harmony of all four: salty, sweet, sour, spicy. Add shredded green papaya, green beans, tomatoes, and peanuts, tossing with the pestle until the papaya is just slightly wilted and dressed.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>Thai cooking balances four flavors: salty (fish sauce), sweet (palm sugar), sour (lime/tamarind), spicy (chili)</li>
-        <li>Fish sauce is the savory backbone of Thai cooking — don't omit it</li>
-        <li>High heat and small batches are essential for proper wok cooking at home</li>
-        <li>Cracking coconut cream before adding to curry concentrates and deepens flavor</li>
-        <li>Fresh herbs should always be added last to preserve their fragrance and color</li>
-        <li>Making curry paste from scratch delivers dramatically superior results</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Thai street food at home is entirely achievable once you understand its underlying principles. Stock the pantry, learn to taste and balance, embrace high heat, and never skip the fresh herbs. The more you cook Thai food, the more you'll develop the intuitive sense of flavor balance that is the mark of every great Thai cook — the ability to taste a dish in progress and know exactly what it needs: a splash more fish sauce, another squeeze of lime, one more pinch of sugar. That sensibility, once learned, never leaves you.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What can I substitute for fish sauce? <span>+</span></div><div class="faq-a">Soy sauce with a small amount of lime juice approximates the flavor profile for vegetarians. Vegan fish sauce made from seaweed and mushrooms is also widely available and very close to the original.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is galangal the same as ginger? <span>+</span></div><div class="faq-a">No. While related, galangal has a more medicinal, earthy, almost pine-like flavor compared to ginger's warmth and sharpness. They're not interchangeable, though young ginger with a bit of lemon zest is sometimes used as an imperfect substitute.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How spicy is authentic Thai green curry? <span>+</span></div><div class="faq-a">Authentic Thai green curry is quite spicy — it traditionally contains a significant amount of fresh green chilies. Most restaurant versions in the West are dialed back considerably. You control the heat by adjusting the chili quantity in your paste.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I freeze homemade curry paste? <span>+</span></div><div class="faq-a">Absolutely. Freeze curry paste in tablespoon-sized portions in an ice cube tray, then transfer to a bag. Frozen paste lasts up to 3 months with minimal flavor loss.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What type of noodles do I need for Pad Thai? <span>+</span></div><div class="faq-a">Flat dried rice noodles, about 3–5mm wide, are traditional. Soak in room temperature water for 30 minutes (not boiling — they'll finish cooking in the wok). If they over-soak, they'll break in the pan.</div></div>
-    </div>`
+    <p>Green curry paste is made by pounding galangal, lemongrass, kaffir lime peel, green chilies, shallots, garlic, coriander root, cumin, and shrimp paste together in a mortar until completely smooth. Fry the paste in coconut cream until the oil splits from the solids — this "cracking" of the coconut cream concentrates and deepens the curry.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>Thai cooking balances four flavors: salty (fish sauce), sweet (palm sugar), sour (lime/tamarind), spicy (chili)</li><li>Fish sauce is the savory backbone of Thai cooking — don't omit it</li><li>High heat and small batches are essential for proper wok cooking at home</li><li>Cracking coconut cream before adding to curry concentrates and deepens flavor</li><li>Fresh herbs should always be added last to preserve their fragrance and color</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Thai street food at home is entirely achievable once you understand its underlying principles. Stock the pantry, learn to taste and balance, embrace high heat, and never skip the fresh herbs.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What can I substitute for fish sauce? <span>+</span></div><div class="faq-a">Soy sauce with a small amount of lime juice approximates the flavor profile for vegetarians. Vegan fish sauce made from seaweed and mushrooms is also widely available.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I freeze homemade curry paste? <span>+</span></div><div class="faq-a">Absolutely. Freeze curry paste in tablespoon-sized portions in an ice cube tray, then transfer to a bag. Frozen paste lasts up to 3 months with minimal flavor loss.</div></div></div>`
   },
   {
     title: "The Science of Perfect Chocolate Chip Cookies",
@@ -1156,45 +1060,18 @@ const blogs = [
     meta: "Marcus Chen • May 2025",
     date: "May 2025",
     readTime: "10 min read",
-    content: `<p>The chocolate chip cookie may seem like the simplest of baked goods — just combine ingredients, shape, and bake. But the simplicity is deceptive. Chocolate chip cookies occupy a fascinating space where food science, chemistry, and personal preference intersect. Small changes in ingredients or technique produce dramatically different results: thin and crispy, thick and cakey, chewy and fudgy, or — the holy grail — crispy on the edge and supremely chewy in the center. Understanding the science behind these variables allows you to bake the exact cookie you want, consistently.</p>
+    content: `<p>The chocolate chip cookie may seem like the simplest of baked goods — but small changes in ingredients or technique produce dramatically different results. Understanding the science allows you to bake the exact cookie you want, consistently.</p>
     <h2>The Role of Flour</h2>
-    <p>Flour provides structure through gluten development and starch gelatinization. All-purpose flour (10–12% protein) produces a moderate amount of gluten and creates a balanced cookie — not too chewy, not too delicate. Bread flour (12–14% protein) produces more gluten, which traps steam during baking and creates a chewier, more substantial cookie. Cake flour (7–9% protein) creates less gluten and more tender, cakey cookies. The New York Times' famous "perfect chocolate chip cookie" uses bread flour specifically for its chew.</p>
+    <p>Bread flour (12–14% protein) produces more gluten, which creates a chewier, more substantial cookie. Cake flour (7–9% protein) creates less gluten and more tender, cakey cookies. All-purpose flour is the balanced middle ground.</p>
     <h2>Butter: Temperature and Browning</h2>
-    <p>Room temperature butter, creamed with sugar, traps air bubbles that expand during baking to create a cakey, risen cookie. Cold butter doesn't cream well and creates dense cookies. But browned butter? Brown butter has lost its water content through evaporation and has developed hundreds of new flavor compounds through the Maillard reaction — toasted, nutty, caramelized notes that make cookies taste dramatically more complex. Brown your butter, then chill it until solid before using for the most flavorful chewy cookies.</p>
-    <h2>Sugar: White vs. Brown</h2>
-    <p>White sugar (sucrose) promotes spread and crispness — it melts completely and encourages cookies to spread thin. Brown sugar (sucrose + molasses) is hygroscopic, meaning it attracts and retains moisture. Brown sugar-heavy cookies stay moist and chewy longer and have a caramelized, molasses-forward flavor. The ratio of white to brown sugar is one of the most powerful tools in cookie customization: more white = crisper, more brown = chewier.</p>
-    <h2>The Egg Equation</h2>
-    <p>Whole eggs add structure (through protein) and richness (through fat in the yolk). Using only yolks — with no whites — produces fudgier, richer cookies because you remove the structural protein of the whites while retaining the fat. Eggs also contain emulsifiers that help bind fat and water, creating a cohesive, smooth dough that bakes evenly.</p>
+    <p>Brown butter has lost its water content and developed hundreds of new flavor compounds through the Maillard reaction — toasted, nutty, caramelized notes that make cookies taste dramatically more complex. Brown your butter, then chill it until solid before using.</p>
     <h2>The Critical Importance of Resting</h2>
-    <p>Chilling cookie dough for 24–72 hours before baking has a profound effect on flavor and texture. During this rest, the flour continues to hydrate fully, creating a tighter, more cohesive dough that spreads less in the oven. More importantly, enzymatic activity begins breaking down some of the carbohydrates in the flour into simpler sugars, which not only accelerates browning in the oven but adds a more complex, toffee-like sweetness to the finished cookie. The difference between day-1 and day-3 cookies from the same batch is remarkable.</p>
-    <h2>Chocolate Selection</h2>
-    <p>The chocolate matters enormously. High-quality chocolate chips (Valrhona, Callebaut, Guittard) contain more cocoa butter and less sugar than supermarket chips, melting into creamy, glossy puddles rather than the waxy, under-melted pools that cheaper chips create. Chopping chocolate from a good bar (using a large knife at an angle to create varied shards of different sizes) produces the ideal distribution: large chunks for dramatic pools, small shards that melt throughout the dough, and powdery "chocolate dust" that flavors the cookie itself.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>Bread flour creates chewier cookies; cake flour creates cakier ones</li>
-        <li>Browned butter adds complex, nutty flavor that transforms the cookie entirely</li>
-        <li>More brown sugar = chewier; more white sugar = crispier and more spread</li>
-        <li>Egg yolks only (no whites) produces fudgier, richer cookies</li>
-        <li>Resting dough for 24–72 hours in the fridge dramatically improves flavor and texture</li>
-        <li>Quality chocolate (chopped from a bar) melts better than standard chips</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Once you understand the science of chocolate chip cookies, you realize there is no single "perfect" recipe — only the perfect recipe for your preferences. Thin and crispy? More white sugar, less flour, bake longer. Thick and cakey? Cream your butter, add an extra egg white, and bake at lower temperature. Chewy and fudgy? Brown butter, extra yolks, lots of brown sugar, and a 48-hour rest. The science gives you control; the baking gives you joy. Make them your own.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why do my cookies spread too much? <span>+</span></div><div class="faq-a">Overly warm butter, too little flour, or baking on hot pans causes excessive spread. Chill your dough for at least 30 minutes before baking, and always use a cool baking sheet. If dough is still spreading, add 1–2 tablespoons more flour.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I use salted or unsalted butter? <span>+</span></div><div class="faq-a">Unsalted butter gives you control over the salt level. Always add salt separately (and more than you think you need — salt amplifies sweetness and complexity). A generous pinch of flaky sea salt on top before baking is transformative.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I get perfectly round cookies? <span>+</span></div><div class="faq-a">Immediately after removing from the oven, use a round cookie cutter or drinking glass slightly larger than the cookie and swirl it around the cookie in circular motions while it's still soft. It will reshape into a perfect circle as it sets.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I freeze cookie dough? <span>+</span></div><div class="faq-a">Yes, and it's highly recommended. Portion dough into balls, freeze solid on a tray, then transfer to bags. Bake directly from frozen, adding 2–3 minutes to the baking time. You can have fresh cookies in minutes whenever you want them.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What temperature should I bake cookies at? <span>+</span></div><div class="faq-a">375°F (190°C) is a good all-purpose temperature. Higher (425°F) produces more spread and crispness. Lower (325°F) for longer creates a thicker, paler, cakier cookie. Always experiment with your specific oven.</div></div>
-    </div>`
+    <p>Chilling cookie dough for 24–72 hours before baking has a profound effect on flavor and texture. Enzymatic activity breaks down carbohydrates into simpler sugars, which accelerates browning and adds a more complex, toffee-like sweetness. The difference between day-1 and day-3 cookies from the same batch is remarkable.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>Bread flour creates chewier cookies; cake flour creates cakier ones</li><li>Browned butter adds complex, nutty flavor that transforms the cookie entirely</li><li>More brown sugar = chewier; more white sugar = crispier</li><li>Resting dough for 24–72 hours dramatically improves flavor and texture</li><li>Quality chocolate chopped from a bar melts better than standard chips</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Once you understand the science of chocolate chip cookies, you realize there is no single "perfect" recipe — only the perfect recipe for your preferences. The science gives you control; the baking gives you joy.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why do my cookies spread too much? <span>+</span></div><div class="faq-a">Overly warm butter, too little flour, or baking on hot pans causes excessive spread. Chill your dough for at least 30 minutes before baking, and always use a cool baking sheet.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I freeze cookie dough? <span>+</span></div><div class="faq-a">Yes! Portion dough into balls, freeze solid on a tray, then transfer to bags. Bake directly from frozen, adding 2–3 minutes to the baking time.</div></div></div>`
   },
   {
     title: "Knife Skills: The Foundation of All Great Cooking",
@@ -1204,44 +1081,20 @@ const blogs = [
     meta: "Marcus Chen • June 2025",
     date: "Jun 2025",
     readTime: "9 min read",
-    content: `<p>Every culinary school in the world begins its curriculum the same way: teaching students how to hold a knife, how to move it, and how to maintain it. This is not an accident. Knife skills are the most fundamental technical competency in cooking — they determine how evenly your vegetables cook, how efficiently you work, and (critically) how safely you operate in a kitchen. A cook with excellent knife skills moves through prep work with a fluid, almost hypnotic rhythm; a cook with poor skills hacks, saws, and exhausts themselves to produce uneven results that cook poorly.</p>
+    content: `<p>Knife skills are the most fundamental technical competency in cooking. They determine how evenly your vegetables cook, how efficiently you work, and how safely you operate in a kitchen.</p>
     <h2>Choosing the Right Knife</h2>
-    <p>You need fewer knives than cookware manufacturers would like you to believe. For most cooking tasks, three knives cover everything: an 8–10 inch chef's knife (your primary tool for almost everything), a paring knife (for small, precise work), and a serrated bread knife (for bread and tomatoes). Invest in the best chef's knife you can afford — this single tool will spend more time in your hand than every other piece of equipment combined.</p>
-    <p>German-style knives (Wüsthof, Henckels) are heavier, with a bolster and a slightly curved blade designed for rocking cuts. Japanese knives (Global, Shun, MAC) are typically lighter, thinner, and harder, holding a sharper edge for longer but requiring more care. Neither is universally better — the best knife is the one that feels right in your hand and that you enjoy using.</p>
+    <p>You need only three knives: an 8–10 inch chef's knife, a paring knife, and a serrated bread knife. Invest in the best chef's knife you can afford — this single tool will spend more time in your hand than every other piece of equipment combined.</p>
     <h2>The Proper Grip</h2>
-    <p>Most people hold a chef's knife by wrapping their entire hand around the handle. This is wrong, and it's the reason they're imprecise and tire quickly. The proper grip is the "pinch grip": your thumb and the side of your index finger pinch the blade itself, just in front of the bolster, with the remaining three fingers wrapped around the handle. This grip puts you in control of the blade and significantly reduces fatigue during extended prep work.</p>
+    <p>The proper grip is the "pinch grip": your thumb and the side of your index finger pinch the blade itself, just in front of the bolster, with the remaining three fingers wrapped around the handle.</p>
     <h2>The Claw: Protecting Your Fingers</h2>
-    <p>The hand that holds the food must form a "claw" — fingers curled under so that the first knuckles, not the fingertips, guide the blade. The flat side of the blade rests against these knuckle guides, and as you make each cut, the guiding hand moves back incrementally, with knuckles serving as the blade's guardrail. This technique makes it structurally almost impossible to cut your fingertips. Learn to use the claw instinctively and kitchen injuries become extremely rare.</p>
-    <h2>The Classic Cuts</h2>
-    <p>Professional cooking uses a specific vocabulary of cuts, and for good reason: different cuts determine cooking time and texture. The julienne (matchstick cut, approximately 2mm × 2mm × 5cm) creates vegetables that cook quickly and are visually elegant. The brunoise (fine dice, approximately 2mm × 2mm × 2mm) is the most refined cut, used in fine dining preparations. The chiffonade (fine ribbons, achieved by stacking, rolling, and slicing leafy herbs or greens) is the proper technique for basil, mint, and similar leaves.</p>
+    <p>The hand that holds the food must form a "claw" — fingers curled under so that the first knuckles guide the blade. The flat side of the blade rests against these knuckle guides. This technique makes it structurally almost impossible to cut your fingertips.</p>
     <h2>Knife Maintenance</h2>
-    <p>A dull knife is far more dangerous than a sharp one — it requires more force to cut, increasing the likelihood of slipping. Maintain your blade with a honing steel (a steel rod that realigns the blade's edge between sharpenings) used at 15–20 degrees every time you use the knife. Sharpen with a whetstone (the superior method) or a pull-through sharpener (faster but removes more metal) every few months. Never put knives in the dishwasher — the vibration and heat damage both the blade and handle.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>You need only 3 knives: chef's knife, paring knife, and bread knife</li>
-        <li>The pinch grip (thumb and index finger on blade) gives control and reduces fatigue</li>
-        <li>The claw technique (curled fingers on guiding hand) virtually eliminates cut injuries</li>
-        <li>Even cuts mean even cooking — inconsistency creates some pieces overcooked and others raw</li>
-        <li>Hone your knife before every use; sharpen with a whetstone every few months</li>
-        <li>Never put knives in the dishwasher — hand wash and dry immediately</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Time spent practicing knife skills is never wasted. Even 20 minutes a day practicing your onion dice, your julienne carrots, and your chiffonade of basil will produce remarkable improvement over the course of a month. The claw becomes automatic. The pinch grip feels natural. The rhythm of prep work becomes meditative rather than laborious. And when you pick up that perfectly sharp chef's knife and it glides effortlessly through a pile of vegetables, producing beautifully even pieces that will cook in perfect unison, you'll understand why professionals consider knife skills the true first art of the kitchen.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How often should I sharpen my knife? <span>+</span></div><div class="faq-a">Hone (realign the edge) every time you cook. Sharpen (remove metal to create a new edge) every 3–6 months for home use, or whenever the knife no longer cuts through paper cleanly with light pressure.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What's the difference between honing and sharpening? <span>+</span></div><div class="faq-a">Honing realigns the microscopic edge of the blade without removing metal — the edge gets bent during use and honing straightens it. Sharpening removes metal to grind a new, sharper edge. Both are necessary.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is a German or Japanese knife better for home cooks? <span>+</span></div><div class="faq-a">German knives are more forgiving (they can handle harder tasks like breaking down poultry without chipping) and easier to maintain. Japanese knives are sharper out of the box but more brittle. German knives are often recommended for beginners.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What cutting board should I use? <span>+</span></div><div class="faq-a">Wood (end-grain is best) or plastic. Wood is gentler on knife edges and naturally antimicrobial. Never use glass, ceramic, or stone boards — they destroy knife edges instantly. Dedicated plastic boards for raw meat and poultry are a hygienic choice.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I cut an onion without crying? <span>+</span></div><div class="faq-a">The lachrymatory factor (the compound that makes you cry) is released when cells are ruptured. A very sharp knife ruptures fewer cells. Chilling the onion for 15 minutes before cutting also helps. Some people swear by cutting near an open window or fan.</div></div>
-    </div>`
+    <p>A dull knife is far more dangerous than a sharp one. Maintain your blade with a honing steel every time you use the knife. Sharpen with a whetstone every few months. Never put knives in the dishwasher.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>You need only 3 knives: chef's knife, paring knife, and bread knife</li><li>The pinch grip (thumb and index finger on blade) gives control and reduces fatigue</li><li>The claw technique virtually eliminates cut injuries</li><li>Hone your knife before every use; sharpen with a whetstone every few months</li><li>Never put knives in the dishwasher — hand wash and dry immediately</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Time spent practicing knife skills is never wasted. The claw becomes automatic. The pinch grip feels natural. The rhythm of prep work becomes meditative rather than laborious.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What's the difference between honing and sharpening? <span>+</span></div><div class="faq-a">Honing realigns the microscopic edge of the blade without removing metal. Sharpening removes metal to grind a new, sharper edge. Both are necessary.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What cutting board should I use? <span>+</span></div><div class="faq-a">Wood (end-grain is best) or plastic. Never use glass, ceramic, or stone boards — they destroy knife edges instantly.</div></div></div>`
   },
   {
     title: "The Ultimate Guide to Indian Spices",
@@ -1251,92 +1104,35 @@ const blogs = [
     meta: "Aisha Okonkwo • July 2025",
     date: "Jul 2025",
     readTime: "12 min read",
-    content: `<p>Indian cuisine is often misunderstood as simply "spicy" food. In reality, Indian cooking is one of the world's most sophisticated spice traditions — a system of flavoring built over thousands of years that uses spice not just for heat but for warmth, depth, fragrance, color, and complexity. A master Indian cook treats spices the way a perfumer treats aromatic compounds: each spice has a character, a role, a relationship with other spices, and an optimal moment in the cooking process for it to be added.</p>
+    content: `<p>Indian cuisine is often misunderstood as simply "spicy" food. In reality, Indian cooking is one of the world's most sophisticated spice traditions — using spice not just for heat but for warmth, depth, fragrance, color, and complexity.</p>
     <h2>The Concept of Tempering</h2>
-    <p>Tempering (called "tadka" or "chaunk" in Hindi) is perhaps the single most important technique in Indian cooking. Whole spices — mustard seeds, cumin seeds, dried chili, curry leaves, cardamom — are added to hot fat (oil or ghee) at the beginning of cooking or poured over a finished dish as a dramatic final flourish. The hot fat extracts fat-soluble flavor compounds from the spices and distributes them throughout the dish in a way that adding ground spices mid-cooking cannot achieve.</p>
-    <p>Watch mustard seeds in hot oil: they begin to pop and splutter after 30–45 seconds, signaling that they've bloomed and released their pungent, nutty flavors. Cumin seeds turn a shade darker and emit a toasty, earthy fragrance. Dried red chilies blister and infuse the oil with heat. Adding onions to this aromatic oil immediately begins the savory base of the dish.</p>
-    <h2>Understanding Individual Spices</h2>
-    <p>Cumin is earthy, warm, and slightly bitter — it's the workhorse of Indian cooking, appearing whole in tempering and ground in everything from dal to biryani. Coriander seeds have a floral, citrusy warmth that pairs beautifully with cumin — the two are often combined in equal quantities as a baseline spice mixture. Turmeric is used primarily for color and has a mild, slightly bitter, medicinal flavor; it should always be used in small quantities.</p>
-    <p>Cardamom comes in two varieties: green (sweet, floral, aromatic) and black (smoky, camphor-like, used in meat dishes and biryanis). Fenugreek seeds are among the most intensely bitter of Indian spices but, when used judiciously, add a maple-like undertone and complexity. Asafoetida (hing) smells sulfurous raw but transforms when hit with hot fat into something onion-garlic-like and deeply savory — a pinch can replace onion and garlic entirely in some dishes.</p>
+    <p>Tempering (called "tadka") is perhaps the single most important technique in Indian cooking. Whole spices — mustard seeds, cumin seeds, dried chili, curry leaves — are added to hot fat at the beginning of cooking or poured over a finished dish as a final flourish.</p>
     <h2>Garam Masala: The Aromatic Blend</h2>
-    <p>Garam masala literally means "warm spice blend" — though the warmth refers to the Ayurvedic concept of heating and cooling properties, not temperature. Unlike curry powder (a Western invention), garam masala varies by region and family. A Punjabi garam masala emphasizes cinnamon, clove, and black pepper. A Bengali five-spice (panch phoron) uses mustard, fenugreek, nigella, cumin, and fennel seeds in equal parts. Making your own garam masala — toasting and grinding whole spices — produces a far more vivid, fragrant blend than any pre-made powder.</p>
-    <h2>Buying and Storing Spices</h2>
-    <p>Buy whole spices and grind them fresh whenever possible — ground spices lose their volatile oils rapidly and become dusty and flat within months. Store spices in airtight containers away from heat and direct sunlight. A well-organized spice rack can last years if properly maintained. When in doubt about a spice's freshness, rub a small amount between your fingers: if it barely releases any fragrance, it's past its prime.</p>
-    <h2>Regional Spice Profiles</h2>
-    <p>North Indian cuisine (Punjab, Kashmir, Delhi) is characterized by warm, rich spices: clove, cardamom, cinnamon, bay leaf, and generous use of dairy. South Indian cooking (Tamil Nadu, Kerala, Karnataka) employs coconut, curry leaves, mustard seeds, dried red chili, and asafoetida. Rajasthani cooking uses dried mango powder (amchur) and red chili generously to compensate for the region's limited fresh produce. Bengali cuisine is distinctive for its use of panch phoron and its tendency toward sweet-savory balancing.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>Indian spice is about warmth, depth, and fragrance — not just heat</li>
-        <li>Tempering whole spices in hot fat is the foundational technique in Indian cooking</li>
-        <li>Cumin and coriander are the most versatile pair in the Indian spice pantry</li>
-        <li>Garam masala varies by region — making your own from freshly toasted spices is superior</li>
-        <li>Whole spices stay fresh longer; buy them whole and grind as needed</li>
-        <li>Regional Indian cuisines have dramatically different spice profiles and techniques</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Learning Indian spices is a lifelong journey — one that takes you through history, culture, Ayurveda, and art. But the entry point is accessible: buy a handful of key spices, practice tempering, make your own garam masala, and taste each spice individually to understand its character. The Indian kitchen is one of the most generous in the world — it rewards curiosity with staggering flavor, and the more you learn, the more you realize how deep and beautiful this tradition truly is.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between curry powder and garam masala? <span>+</span></div><div class="faq-a">Curry powder is a British invention — a standardized blend that doesn't exist in traditional Indian cooking. Garam masala is a real Indian spice blend, varying by region, added late in cooking for fragrance. These are very different ingredients with different uses.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why does my Indian food taste flat? <span>+</span></div><div class="faq-a">Most likely cause: old spices and insufficient tempering. Toast your whole spices before grinding, use them within 6 months of purchase, and make sure your tempering oil is hot enough that spices sizzle immediately when added.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is ghee necessary for Indian cooking? <span>+</span></div><div class="faq-a">Not strictly, but ghee (clarified butter) adds a rich, nutty flavor that other oils can't replicate. It has a higher smoke point than regular butter and is worth having for dishes like dal makhani, biryani, or any dish where you want a luxurious finish.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I make a simple garam masala at home? <span>+</span></div><div class="faq-a">Toast in a dry pan until fragrant, then grind: 3 tbsp coriander seeds, 2 tbsp cumin, 1 tbsp black peppercorns, 1 tsp cardamom, 6 cloves, 2 cinnamon sticks, 2 bay leaves. Store in an airtight jar for up to 3 months.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What does blooming spices mean? <span>+</span></div><div class="faq-a">Blooming refers to cooking spices in fat (oil or ghee) before adding other ingredients. Heat opens the spices' cells, releasing fat-soluble flavor compounds into the cooking fat, which then distributes them throughout the entire dish more effectively than adding spices to liquid.</div></div>
-    </div>`
+    <p>Garam masala literally means "warm spice blend." Unlike curry powder (a Western invention), garam masala varies by region and family. Making your own — toasting and grinding whole spices — produces a far more vivid, fragrant blend than any pre-made powder.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>Indian spice is about warmth, depth, and fragrance — not just heat</li><li>Tempering whole spices in hot fat is the foundational technique in Indian cooking</li><li>Cumin and coriander are the most versatile pair in the Indian spice pantry</li><li>Garam masala varies by region — making your own from freshly toasted spices is superior</li><li>Whole spices stay fresh longer; buy them whole and grind as needed</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Learning Indian spices is a lifelong journey. But the entry point is accessible: buy a handful of key spices, practice tempering, make your own garam masala, and taste each spice individually to understand its character.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between curry powder and garam masala? <span>+</span></div><div class="faq-a">Curry powder is a British invention — a standardized blend that doesn't exist in traditional Indian cooking. Garam masala is a real Indian spice blend, varying by region, added late in cooking for fragrance.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is ghee necessary for Indian cooking? <span>+</span></div><div class="faq-a">Not strictly, but ghee adds a rich, nutty flavor that other oils can't replicate. It has a higher smoke point than regular butter and is worth having for dishes like dal makhani or biryani.</div></div></div>`
   },
   {
     title: "Farm-to-Table: Cooking with Seasonal Produce",
     category: "Sustainable Cooking",
     image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
-    excerpt: "Cooking seasonally isn't just an ethical choice — it's a flavor choice. In-season produce tastes dramatically better and costs less. Here's how to embrace it.",
+    excerpt: "Cooking seasonally isn't just an ethical choice — it's a flavor choice. In-season produce tastes dramatically better and costs less.",
     meta: "Elena Marchetti • August 2025",
     date: "Aug 2025",
     readTime: "10 min read",
-    content: `<p>There is a tomato in August and a tomato in January. They may look identical on the supermarket shelf, but they are fundamentally different foods. The August tomato — grown in full summer sun, allowed to ripen on the vine in warm air — is a jewel of sweetness and acidity, bursting with the flavor that makes a simple insalata caprese one of the most perfect dishes in the world. The January tomato, grown in a greenhouse, harvested early and gassed with ethylene to develop color during shipping, is a food product that happens to be shaped like a tomato. It is not the same thing.</p>
-    <h2>Understanding Seasonality</h2>
-    <p>Seasonal eating means understanding what grows where and when. In temperate climates, spring brings delicate shoots — asparagus, peas, fava beans, ramps, morels. Summer explodes with abundance: tomatoes, zucchini, corn, peaches, berries, cucumbers. Autumn brings roots and storage crops — squash, sweet potatoes, apples, pears, Brussels sprouts, parsnips. Winter offers the hardiest crops: cabbages, kale, citrus (particularly in Southern regions and imported), storage roots, and preserved foods from earlier seasons.</p>
+    content: `<p>There is a tomato in August and a tomato in January. They may look identical on the supermarket shelf, but they are fundamentally different foods. The August tomato — grown in full summer sun, allowed to ripen on the vine — is a jewel of sweetness and acidity.</p>
     <h2>Why Seasonal Produce Tastes Better</h2>
-    <p>Flavor develops in produce as it approaches peak ripeness — the conversion of starches to sugars, the concentration of volatile aromatic compounds, the development of acids that create complexity. Produce harvested before peak ripeness to survive long-distance transport never fully develops these characteristics. Produce grown locally and harvested at peak ripeness is physically a different food: higher sugar, more complex aromatics, better texture, richer color.</p>
-    <p>Farmers' markets are the best way to access peak-season, locally grown produce. Speak to the farmers — ask what they're proud of this week, what's at the height of its season, what they recommend. This intelligence is priceless and available for free to anyone who asks.</p>
-    <h2>The Art of the Seasonal Menu</h2>
-    <p>The most creative cooking happens when you commit to cooking what's in season rather than starting with a recipe and sourcing ingredients. Go to the farmers' market first. Buy what looks spectacular — what's abundant, what the farmers are excited about. Then go home and figure out what to cook. This reversal of the typical recipe-first approach is how the greatest seasonal cooks have always worked.</p>
+    <p>Flavor develops in produce as it approaches peak ripeness — the conversion of starches to sugars, the concentration of volatile aromatic compounds. Produce harvested before peak ripeness to survive long-distance transport never fully develops these characteristics.</p>
     <h2>Preserving the Season</h2>
-    <p>Preserving peak-season produce allows you to extend the season's flavors through the leaner months. Quick pickling (submerging vegetables in a hot brine of vinegar, water, salt, and sugar) preserves crunch and flavor for weeks. Canning, when done correctly, preserves summer tomatoes for winter sauce. Freezing fruits and blanched vegetables captures peak-season flavor better than any out-of-season fresh product. Fermenting — making sauerkraut from autumn cabbage, kimchi from late-fall napa — creates preserved foods with their own complex, evolved flavors.</p>
-    <h2>Building a Seasonal Pantry</h2>
-    <p>Cooking seasonally doesn't mean you can only use fresh produce. A well-stocked pantry of preserved seasonal items — home-canned tomatoes, fermented vegetables, frozen summer berries, dried herbs and mushrooms — allows you to cook seasonally throughout the year. The combination of what's fresh now with preserved abundance from earlier seasons is how traditional cuisines have always cooked.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>In-season produce has dramatically superior flavor due to proper ripening</li>
-        <li>Farmers' markets are the best source of peak-season, locally grown produce</li>
-        <li>Start at the market, buy what's spectacular, then plan your meals — not the reverse</li>
-        <li>Preserving (pickling, canning, freezing) extends peak-season flavor year-round</li>
-        <li>Seasonal cooking reduces food miles, supports local farmers, and often costs less</li>
-        <li>Understanding your local growing season transforms how and what you cook</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Cooking seasonally is, ultimately, an act of paying attention — to the land, to the rhythm of the year, to the extraordinary gifts that each season brings. When you eat that August tomato simply, with good olive oil and salt, and it tastes the way a tomato should taste, you understand something fundamental about food: that its best version is always the one that honors where it came from and when it was grown. That simplicity, that attunement to nature, is what the greatest cuisines in the world have always been built on.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I know what's in season in my area? <span>+</span></div><div class="faq-a">Visit local farmers' markets and see what's abundant and affordable. Seasonal food guides for your region are available online — "seasonal food guide [your state/country]" will return useful resources. Joining a CSA (Community Supported Agriculture) box is also an excellent way to receive weekly seasonal produce.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is frozen produce seasonal? <span>+</span></div><div class="faq-a">Frozen produce is often frozen at peak ripeness, making it more nutritious and flavorful than out-of-season fresh produce shipped long distances. Frozen peas, corn, berries, and spinach are excellent pantry staples. They're not a replacement for fresh in-season produce, but far better than out-of-season fresh.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is seasonal eating more expensive? <span>+</span></div><div class="faq-a">Generally, no. In-season produce is abundant and therefore cheaper. Out-of-season produce commands a premium because it must be grown in greenhouses or shipped from other hemispheres. The most expensive items at any produce market are usually the out-of-season ones.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a CSA box? <span>+</span></div><div class="faq-a">CSA stands for Community Supported Agriculture. You pay a farm upfront for a "share" of their harvest, and each week during the growing season you receive a box of whatever they harvested that week. It's an excellent way to cook seasonally while directly supporting local agriculture.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How should I store different produce types? <span>+</span></div><div class="faq-a">Most fruit ripens better at room temperature and should only be refrigerated once ripe. Most vegetables (except tomatoes, onions, garlic, and winter squash) prefer refrigerator storage. Herbs keep best stored upright in a glass of water in the fridge, loosely covered with a bag.</div></div>
-    </div>`
+    <p>Quick pickling, canning, freezing, and fermenting all preserve peak-season produce for the leaner months. The combination of what's fresh now with preserved abundance from earlier seasons is how traditional cuisines have always cooked.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>In-season produce has dramatically superior flavor due to proper ripening</li><li>Farmers' markets are the best source of peak-season, locally grown produce</li><li>Start at the market, buy what's spectacular, then plan your meals</li><li>Preserving (pickling, canning, freezing) extends peak-season flavor year-round</li><li>Seasonal cooking reduces food miles, supports local farmers, and often costs less</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Cooking seasonally is an act of paying attention — to the land, to the rhythm of the year, to the extraordinary gifts that each season brings.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is seasonal eating more expensive? <span>+</span></div><div class="faq-a">Generally, no. In-season produce is abundant and therefore cheaper. Out-of-season produce commands a premium because it must be grown in greenhouses or shipped from other hemispheres.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a CSA box? <span>+</span></div><div class="faq-a">CSA stands for Community Supported Agriculture. You pay a farm upfront for a "share" of their harvest, and each week during the growing season you receive a box of whatever they harvested that week.</div></div></div>`
   },
   {
     title: "The Art of Japanese Ramen From Scratch",
@@ -1346,46 +1142,18 @@ const blogs = [
     meta: "Marcus Chen • September 2025",
     date: "Sep 2025",
     readTime: "13 min read",
-    content: `<p>Ramen is Japan's gift to the world of noodle soups — a dish of astonishing depth and complexity that has spawned obsessive cult followings, years-long apprenticeships, and decades of study among its greatest practitioners. Unlike Chinese noodle soups from which it partially derives, ramen has developed into something distinctly Japanese: precise, refined, and yet deeply satisfying in a way that can only be described as "nourishing the soul." Making proper ramen from scratch at home is a two-day project. It is also one of the most rewarding things you can cook.</p>
+    content: `<p>Ramen is Japan's gift to the world of noodle soups — a dish of astonishing depth and complexity. Making proper ramen from scratch at home is a two-day project and one of the most rewarding things you can cook.</p>
     <h2>The Four Elements of Ramen</h2>
-    <p>A bowl of ramen consists of four distinct components: the broth (the soup base, either clear or cloudy), the tare (a concentrated seasoning sauce whisked into the broth just before serving), the noodles, and the toppings. Each element is prepared separately and combined at the last moment. This modular structure is what allows ramen shops to serve dozens of different bowl styles from a single core preparation — change the tare, change the bowl.</p>
+    <p>A bowl of ramen consists of four distinct components: the broth, the tare (a concentrated seasoning sauce), the noodles, and the toppings. Each element is prepared separately and combined at the last moment.</p>
     <h2>The Broth: Tonkotsu</h2>
-    <p>Tonkotsu is the most iconic and dramatic of ramen broths — a thick, creamy, milky-white pork bone broth that gets its opacity from collagen extracted at a rolling boil. Unlike most stocks, which are kept at a gentle simmer to produce clarity, tonkotsu is deliberately kept at a vigorous boil for 8–12 hours. This aggressive cooking emulsifies the collagen and fat into the water, creating the characteristic richness.</p>
-    <p>Begin by blanching pork bones (trotters and femur bones are ideal) in boiling water for 10 minutes to remove blood and impurities. Rinse thoroughly under cold water, then transfer to a large pot with fresh water, ginger, green onions, and garlic. Bring to a vigorous boil and maintain it for at least 8 hours, adding water as needed to keep the bones submerged. The broth will gradually turn from clear to milky white. Strain through a fine mesh strainer.</p>
-    <h2>Shoyu Tare: The Soul of the Bowl</h2>
-    <p>Tare is the concentrated seasoning element that makes each bowl uniquely flavored. Shoyu tare (soy sauce based) combines soy sauce with mirin, sake, dried kelp, dried bonito, and aromatics, simmered and strained into a dark, intensely savory liquid. A few tablespoons whisked into hot broth immediately before serving is what gives the bowl its salt level and fundamental flavor profile.</p>
+    <p>Tonkotsu is kept at a vigorous boil for 8–12 hours, which emulsifies the collagen and fat into the water, creating the characteristic creamy richness. The broth will gradually turn from clear to milky white.</p>
     <h2>The Chashu Pork</h2>
-    <p>Chashu pork belly — braised and rolled, then sliced into glossy, silky rounds — is the quintessential ramen topping. Rub a slab of pork belly with salt and sugar, roll it tightly, and tie with kitchen twine. Sear until golden on all sides, then braise in a mixture of soy sauce, mirin, sake, and sugar for 2 hours until the pork is completely tender. Cool in the braising liquid (which becomes a secondary tare), slice thinly, and caramelize in a pan or with a torch before serving.</p>
-    <h2>The Perfect Soft-Boiled Egg (Ajitama)</h2>
-    <p>Ramen eggs are marinated soft-boiled eggs with a custardy, barely-set yolk and a richly seasoned exterior. Bring water to a boil, lower eggs gently in, and cook for exactly 6 minutes and 30 seconds. Transfer immediately to ice water. Peel carefully and marinate in a mixture of soy sauce, mirin, and water for at least 4 hours (overnight is better). The result is a golden-yolked egg with a complex, savory outer layer — one of ramen's most beloved elements.</p>
-    <h2>The Noodles</h2>
-    <p>Ramen noodles are made with wheat flour and kansui — an alkaline mineral water solution that gives the noodles their characteristic yellow color, springy texture, and resistance to the hot broth. Fresh ramen noodles are best made with bread flour, water, salt, and a small amount of baked baking soda (baking baking soda in a 250°F oven for an hour converts sodium bicarbonate to sodium carbonate, a more potent alkaline agent that approximates kansui). Roll thin and cut into strands.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>Ramen has four elements: broth, tare, noodles, and toppings — each prepared separately</li>
-        <li>Tonkotsu broth requires a vigorous, sustained boil for 8–12 hours to develop opacity</li>
-        <li>Tare is the concentrated seasoning sauce — the same broth with different tare makes different ramen styles</li>
-        <li>Chashu pork should be braised, rolled, and caramelized before serving</li>
-        <li>Ramen eggs require exactly 6:30 minutes of boiling and 4+ hours of marinating</li>
-        <li>Baked baking soda approximates kansui for homemade ramen noodles</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Making ramen from scratch is a project that asks everything of you — your time, your patience, your attention to detail. And it gives everything back. The bowl you produce after two days of work is fundamentally different from anything that can be made quickly. It is a bowl full of care, and that care is perceptible in every sip, in every strand of noodle, in every slice of chashu. Once you make ramen from scratch, it's very difficult to go back. It ruins you, in the best possible way.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are the main regional styles of Japanese ramen? <span>+</span></div><div class="faq-a">The four main regional styles are Tonkotsu (creamy pork bone broth, from Kyushu), Shoyu (soy sauce-seasoned clear chicken broth, Tokyo style), Miso (fermented soybean paste tare, from Hokkaido), and Shio (salt-seasoned light broth, delicate and clean, from Hakodate).</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I make ramen broth faster with a pressure cooker? <span>+</span></div><div class="faq-a">Yes. A pressure cooker produces tonkotsu-style broth in 3–4 hours rather than 8–12. However, the emulsification is less complete and the broth won't be quite as opaque or thick. It's an excellent shortcut for weeknight ramen.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What toppings are traditional for ramen? <span>+</span></div><div class="faq-a">Traditional toppings include chashu pork, soft-boiled marinated egg (ajitama), bamboo shoots (menma), nori (dried seaweed), green onions, bean sprouts, mushrooms, narutomaki (fish cake), and mayu (garlic oil) or sesame oil drizzled on top.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I use store-bought ramen noodles? <span>+</span></div><div class="faq-a">Absolutely. Fresh ramen noodles from Asian grocery stores are excellent. Dried ramen noodles work well too. Avoid the instant noodle packets that come with powdered seasoning — use only the noodles if they're the right variety.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I store leftover ramen broth? <span>+</span></div><div class="faq-a">Cool completely, then refrigerate for up to 5 days or freeze for 3 months. Tonkotsu broth will solidify into a gel-like mass in the refrigerator — this is normal and desirable; it indicates high collagen content. Simply reheat and thin with water if needed.</div></div>
-    </div>`
+    <p>Chashu pork belly — braised and rolled, then sliced into glossy, silky rounds — is the quintessential ramen topping. Braise in a mixture of soy sauce, mirin, sake, and sugar for 2 hours until completely tender.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>Ramen has four elements: broth, tare, noodles, and toppings — each prepared separately</li><li>Tonkotsu broth requires a vigorous, sustained boil for 8–12 hours</li><li>Tare is the concentrated seasoning sauce — the same broth with different tare makes different ramen styles</li><li>Ramen eggs require exactly 6:30 minutes of boiling and 4+ hours of marinating</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Making ramen from scratch is a project that asks everything of you. And it gives everything back. The bowl you produce after two days of work is fundamentally different from anything that can be made quickly.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are the main regional styles of Japanese ramen? <span>+</span></div><div class="faq-a">The four main regional styles are Tonkotsu (creamy pork bone broth), Shoyu (soy sauce-seasoned clear chicken broth), Miso (fermented soybean paste tare), and Shio (salt-seasoned light broth).</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I make ramen broth faster with a pressure cooker? <span>+</span></div><div class="faq-a">Yes. A pressure cooker produces tonkotsu-style broth in 3–4 hours rather than 8–12. The emulsification is less complete but it's an excellent shortcut for weeknight ramen.</div></div></div>`
   },
   {
     title: "Wine Pairing Fundamentals for the Home Cook",
@@ -1395,44 +1163,18 @@ const blogs = [
     meta: "Elena Marchetti • October 2025",
     date: "Oct 2025",
     readTime: "9 min read",
-    content: `<p>Wine pairing has an undeserved reputation for elitism and arcane complexity. It's often presented as a field requiring encyclopedic knowledge of wine regions, grape varieties, and vintage years — knowledge that seems inaccessible to the average home cook. But the fundamentals of wine pairing are actually intuitive, rooted in the same flavor principles that guide all good cooking, and learnable in an afternoon. Once you understand why certain wines work with certain foods, you develop an instinct that serves you forever, without reference to any book or app.</p>
+    content: `<p>Wine pairing has an undeserved reputation for elitism. The fundamentals are actually intuitive, rooted in the same flavor principles that guide all good cooking, and learnable in an afternoon.</p>
     <h2>The Core Principle: Complement or Contrast</h2>
-    <p>Every wine pairing works on one of two principles: complementing the food (matching like with like) or contrasting it (using difference to balance). A rich, buttery Chardonnay complements a rich, buttery lobster with cream sauce — they exist in the same flavor register. But a crisp, acid-forward Chablis (also from the Chardonnay grape) contrasts with that lobster, cutting through the richness with its minerality and creating refreshing balance. Both pairings work; they create different experiences.</p>
+    <p>Every wine pairing works on one of two principles: complementing the food (matching like with like) or contrasting it (using difference to balance). Both approaches work; they create different experiences.</p>
     <h2>Understanding Wine's Key Flavor Variables</h2>
-    <p>To pair wine intelligently, you need to understand its key variables: acidity, tannin, sweetness, body, and flavor character. Acidity is the most important pairing variable — high-acid wines (most whites, many Italian reds) cut through rich foods, cleanse the palate, and make food taste brighter. Tannin (found primarily in red wines) is the astringent, mouth-drying compound from grape skins and seeds that pairs naturally with protein and fat in red meat — the protein "softens" the tannin, making both wine and food more pleasurable.</p>
-    <h2>White Wine Pairings</h2>
-    <p>Crisp whites (Sauvignon Blanc, Chablis, Vermentino, Muscadet) pair with delicate, lighter foods: shellfish, raw fish, light chicken preparations, fresh cheeses, salads with vinaigrette. Rich whites (oaked Chardonnay, white Burgundy, Viognier) pair with richer dishes: creamy pasta, lobster, roast chicken with butter sauce, grilled fish with beurre blanc.</p>
-    <p>Aromatic whites (Gewürztraminer, Riesling, Torrontés) pair exceptionally well with spicy food — the slight sweetness and floral fragrance temper heat beautifully, making them the best category of wine for Thai, Indian, and Sichuan cuisine.</p>
-    <h2>Red Wine Pairings</h2>
-    <p>Light reds (Pinot Noir, Gamay/Beaujolais, Barbera) have high acidity and moderate tannin — they bridge the gap between whites and heavier reds, pairing well with salmon, duck, mushroom dishes, and charcuterie. Medium-bodied reds (Sangiovese, Merlot, Grenache) pair with tomato-based pasta, pizza, roasted meats, and Mediterranean vegetables. Full-bodied, tannic reds (Cabernet Sauvignon, Syrah, Barolo, Nebbiolo) demand protein-rich foods — grilled steak, lamb chops, braised short rib — to soften their tannic structure.</p>
+    <p>Acidity is the most important pairing variable — high-acid wines cut through rich foods, cleanse the palate, and make food taste brighter. Tannin (found primarily in red wines) pairs naturally with protein and fat in red meat.</p>
     <h2>The Regional Rule</h2>
-    <p>When in doubt, pair a wine with the food from its region of origin. This rule works with remarkable reliability because regional wines evolved alongside regional cuisines over centuries. Chianti with Florentine steak. Muscadet with oysters from the Loire Valley. Rioja with lamb from Castile. Riesling with pork schnitzel from Alsace. Regional pairing isn't lazy thinking — it's respecting centuries of accumulated wisdom.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>Pairings work through complementing (matching) or contrasting (balancing) food flavors</li>
-        <li>Acidity is the most important variable: high-acid wines cut richness and refresh the palate</li>
-        <li>Tannin in red wine pairs naturally with protein and fat in red meat</li>
-        <li>Aromatic, slightly sweet whites (Riesling, Gewürztraminer) pair best with spicy food</li>
-        <li>Regional pairing (wine with food from the same region) works with remarkable consistency</li>
-        <li>The best pairing is the one that makes both the food and wine taste better — trust your palate</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Wine pairing is, at its core, about generosity — the generosity of adding something to a meal that makes the food more delicious, the wine more enjoyable, and the experience more memorable. You don't need to know every wine region to pair well. You need curiosity, a willingness to experiment, and the understanding of a few core principles. Start with the regional rule, develop your awareness of acidity and tannin, and drink with intention. The rest will follow naturally, one great pairing at a time.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is it true that white wine with fish and red wine with meat? <span>+</span></div><div class="faq-a">This is a useful starting point but an oversimplification. Rich fish (salmon, tuna) pair beautifully with light reds like Pinot Noir. Light meats (chicken, veal) pair well with rich whites. The actual rule is about the weight and flavor of the dish, not the protein type.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What wine pairs with chocolate desserts? <span>+</span></div><div class="faq-a">The wine should be at least as sweet as the dessert, otherwise it tastes thin and sharp. Port (Ruby or Tawny), Pedro Ximénez sherry, Banyuls (a fortified wine from France), or late-harvest Zinfandel all pair wonderfully with dark chocolate.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can sparkling wine pair with food beyond celebrations? <span>+</span></div><div class="faq-a">Absolutely. Champagne and other sparkling wines are among the most versatile food wines: their acidity and bubbles cut richness, while their complexity elevates many dishes. They pair beautifully with fried food, oysters, sushi, charcuterie boards, and soft cheeses.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What if I only drink white wine but want to serve red meat? <span>+</span></div><div class="faq-a">Don't force a pairing you won't enjoy. Drink what you like. That said, a well-structured Chardonnay with a creamy sauce, a dry rosé (especially from Provence), or even a lighter red (Pinot Noir) can bridge the gap if you want to experiment.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How important is wine quality for cooking? <span>+</span></div><div class="faq-a">Never cook with wine you wouldn't drink. The water evaporates, concentrating the wine's flavors — including off-flavors if the wine is poor. However, you don't need to cook with expensive wine. A simple, honest, good-value wine that you'd happily drink is perfect for cooking.</div></div>
-    </div>`
+    <p>When in doubt, pair a wine with the food from its region of origin. Chianti with Florentine steak. Muscadet with oysters from the Loire Valley. Riesling with pork schnitzel from Alsace. Regional pairing respects centuries of accumulated wisdom.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>Pairings work through complementing or contrasting food flavors</li><li>Acidity is the most important variable: high-acid wines cut richness</li><li>Tannin in red wine pairs naturally with protein and fat in red meat</li><li>Aromatic, slightly sweet whites (Riesling, Gewürztraminer) pair best with spicy food</li><li>Regional pairing works with remarkable consistency</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Wine pairing is about generosity — the generosity of adding something to a meal that makes the food more delicious and the experience more memorable.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is it true that white wine with fish and red wine with meat? <span>+</span></div><div class="faq-a">This is a useful starting point but an oversimplification. Rich fish (salmon, tuna) pair beautifully with light reds like Pinot Noir. The actual rule is about the weight and flavor of the dish, not the protein type.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How important is wine quality for cooking? <span>+</span></div><div class="faq-a">Never cook with wine you wouldn't drink. The water evaporates, concentrating the wine's flavors — including off-flavors if the wine is poor. A simple, honest, good-value wine is perfect for cooking.</div></div></div>`
   },
   {
     title: "Grilling Mastery: Beyond the Basic Burger",
@@ -1442,44 +1184,16 @@ const blogs = [
     meta: "Marcus Chen • November 2025",
     date: "Nov 2025",
     readTime: "10 min read",
-    content: `<p>Grilling is in the DNA of every culture on earth. From Argentine asado to Korean barbecue, from Japanese yakitori to Indian tandoor cooking, every culinary tradition has its own version of cooking over fire. What unites them all is the transformative effect of direct high heat on food: the Maillard reaction producing the caramelized, smoky crust that is one of the most satisfying flavors humans have ever created. Mastering the grill means understanding this heat, learning to control it, and developing the intuition to use it on everything from delicate fish to whole roasting vegetables to stone fruit.</p>
+    content: `<p>Grilling is in the DNA of every culture on earth. What unites them all is the transformative effect of direct high heat on food: the Maillard reaction producing the caramelized, smoky crust that is one of the most satisfying flavors humans have ever created.</p>
     <h2>Understanding Your Heat Zones</h2>
-    <p>The single biggest mistake home grillers make is using a uniformly hot grill. Professional grillers always establish zones: a hot direct-heat zone for searing, a medium zone for cooking through, and a cool no-heat zone for resting or holding food. On a charcoal grill, this means banking coals to one side. On a gas grill, it means keeping some burners off or on low. This two-zone setup lets you sear a steak over intense heat, then move it to indirect heat to cook to the proper internal temperature without burning the exterior.</p>
-    <h2>The Science of Grill Marks</h2>
-    <p>Grill marks are not just aesthetic — they represent concentrated Maillard browning where the food made contact with the hot grates. Achieving good grill marks requires dry food (moisture creates steam, which inhibits browning), a properly preheated grill (at least 15 minutes for gas, until the coals are ash-covered for charcoal), well-oiled grates (brush with vegetable oil using tongs and a folded paper towel), and the discipline not to move food for the first 2–3 minutes until it naturally releases from the grates.</p>
-    <h2>Grilling Fish Without Disaster</h2>
-    <p>Fish on the grill strikes fear into home cooks because it can stick, break, and fall through the grates. The solution is fourfold: use skin-on fillets or steaks (the skin acts as a protective layer), oil both the fish and the grates generously, use the hottest part of the grill for a quick sear, and resist moving the fish until it naturally releases (at least 3–4 minutes). For delicate fish, a fish basket, cedar plank, or a packet of foil over indirect heat eliminates risk entirely.</p>
-    <h2>Vegetables and Fruit</h2>
-    <p>Grilled vegetables are one of the most underappreciated pleasures of the grill season. Thick-cut zucchini, peppers, eggplant, asparagus, corn in husk, halved onions, and whole mushrooms all benefit enormously from high-heat grill char, which concentrates their flavors and develops a smoky sweetness. Brush generously with olive oil and season before grilling; finish with a squeeze of lemon and fresh herbs.</p>
-    <p>Grilled stone fruit — peach halves, plum halves, whole figs — deserve more attention than they receive. The grill caramelizes their natural sugars and softens their flesh, creating a dessert base that pairs beautifully with vanilla ice cream, mascarpone, or crème fraîche. They take only 3–4 minutes and require nothing more than halving, pitting, and a light brush of butter or oil.</p>
+    <p>Always establish zones: a hot direct-heat zone for searing, a medium zone for cooking through, and a cool no-heat zone for resting. This two-zone setup lets you sear a steak over intense heat, then move it to indirect heat to cook to the proper internal temperature without burning the exterior.</p>
     <h2>The Resting Rule</h2>
-    <p>Every piece of meat grilled must rest after cooking. During cooking, heat drives moisture toward the center of the protein. Cutting immediately releases this moisture onto the cutting board in a pool of pink juice. Resting for 5–10 minutes (longer for larger cuts) allows this moisture to redistribute throughout the meat, resulting in a juicier, more flavorful final product. Tent loosely with foil but avoid wrapping tightly — you want the crust to stay crispy, not steam itself soft.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>Always establish two heat zones: direct (hot) for searing, indirect (cool) for finishing</li>
-        <li>Preheat thoroughly and oil the grates for every grilling session</li>
-        <li>Dry food = better browning; pat meat and fish thoroughly dry before grilling</li>
-        <li>Don't move food until it naturally releases from the grates (usually 2–4 minutes)</li>
-        <li>Always rest grilled meat before cutting — 5 minutes for steaks, more for larger cuts</li>
-        <li>Grilled stone fruit makes a spectacular, effortless dessert</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>The grill rewards confidence. The cook who hovers and pokes and moves food constantly produces inferior results to the cook who preheats properly, places food on the grates with intention, and then walks away. Learn to trust the heat, develop your sense of timing, and expand your grilling repertoire beyond burgers and chicken. When you pull a perfectly charred, rested ribeye off the grill or plate a gorgeous arrangement of caramelized peaches with honey and herbs, you'll understand why this ancient method of cooking endures, unchanged in its essence, from the first fires to the present day.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Gas or charcoal — which is better? <span>+</span></div><div class="faq-a">Charcoal burns hotter and produces smoke that contributes to flavor. Gas is more convenient, heats faster, and gives more precise temperature control. Neither is objectively better — professional chefs are divided. For most home cooks, a quality gas grill with a smoking chip box combines convenience with some of charcoal's flavor benefits.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I know when steak is done without a thermometer? <span>+</span></div><div class="faq-a">The finger test: touch your thumb to your index finger and press the fleshy base of your thumb — that's rare. Middle finger = medium-rare. Ring finger = medium. Pinky = well done. Compare to the center of the steak. This takes practice but works. A thermometer (125°F rare, 135°F medium-rare, 145°F medium) is always more reliable.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I add smoke flavor on a gas grill? <span>+</span></div><div class="faq-a">Soak wood chips (hickory, apple, cherry, mesquite) in water for 30 minutes, then drain and wrap in a foil pouch with holes poked in it. Place directly on the burner (under the grate) and preheat until smoking. This produces meaningful smoke flavor even on a gas grill.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I marinate everything I grill? <span>+</span></div><div class="faq-a">Not necessarily. High-quality cuts don't need marinades — salt, pepper, and high heat do the work. Marinades are most beneficial for tougher cuts (flank steak, chicken thighs) where the acid in the marinade helps tenderize and the flavors penetrate the surface. Avoid sugar-heavy marinades for high-heat grilling — they burn.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why does food stick to my grill? <span>+</span></div><div class="faq-a">The three main causes: insufficient preheating (grates not hot enough), not oiling the grates before cooking, and moving food too soon before it releases naturally. Fix all three and sticking becomes rare. A carbon steel or cast iron grate, properly seasoned, also reduces sticking dramatically.</div></div>
-    </div>`
+    <p>Every piece of meat grilled must rest after cooking. Resting for 5–10 minutes allows moisture to redistribute throughout the meat, resulting in a juicier, more flavorful final product. Tent loosely with foil but avoid wrapping tightly — you want the crust to stay crispy.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>Always establish two heat zones: direct (hot) for searing, indirect (cool) for finishing</li><li>Preheat thoroughly and oil the grates for every grilling session</li><li>Dry food = better browning; pat meat and fish thoroughly dry before grilling</li><li>Always rest grilled meat before cutting — 5 minutes for steaks, more for larger cuts</li><li>Grilled stone fruit makes a spectacular, effortless dessert</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>The grill rewards confidence. Learn to trust the heat, develop your sense of timing, and expand your grilling repertoire beyond burgers and chicken.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Gas or charcoal — which is better? <span>+</span></div><div class="faq-a">Charcoal burns hotter and produces smoke that contributes to flavor. Gas is more convenient and gives more precise temperature control. Neither is objectively better.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why does food stick to my grill? <span>+</span></div><div class="faq-a">The three main causes: insufficient preheating, not oiling the grates before cooking, and moving food too soon before it releases naturally.</div></div></div>`
   },
   {
     title: "The Complete Guide to Fermentation at Home",
@@ -1489,43 +1203,16 @@ const blogs = [
     meta: "Elena Marchetti • December 2025",
     date: "Dec 2025",
     readTime: "11 min read",
-    content: `<p>Fermentation is one of the oldest and most remarkable transformations in all of food: the conversion of simple ingredients — cabbage, milk, tea, flour — into complex, living foods by microbial activity. Humans have been fermenting food for at least 10,000 years, long before they understood the science behind it. What they did know was the result: fermented foods lasted longer, tasted more complex, and made people feel good in ways that fresh food sometimes didn't. Modern science has confirmed what intuition long suspected: fermented foods are extraordinarily good for gut health, digestion, and immunity.</p>
+    content: `<p>Fermentation is one of the oldest and most remarkable transformations in all of food: the conversion of simple ingredients — cabbage, milk, tea, flour — into complex, living foods by microbial activity.</p>
     <h2>The Science of Lacto-Fermentation</h2>
-    <p>Most vegetable ferments (sauerkraut, kimchi, pickles) rely on lacto-fermentation: the activity of naturally occurring Lactobacillus bacteria that convert sugars to lactic acid in an anaerobic (oxygen-free) environment. Salt is the key catalyst: it creates a hostile environment for harmful bacteria while allowing salt-tolerant Lactobacillus to thrive. As lactic acid accumulates, the pH drops, the environment becomes increasingly inhospitable to pathogens, and the ferment becomes self-preserving.</p>
-    <p>This is why lacto-fermented vegetables are safe at room temperature: the acidic environment they create prevents spoilage. It is also why they develop their characteristic sour, complex flavor: lactic acid production is accompanied by the creation of hundreds of flavor compounds — esters, alcohols, ketones — that give fermented foods their depth and complexity.</p>
+    <p>Most vegetable ferments rely on lacto-fermentation: the activity of naturally occurring Lactobacillus bacteria that convert sugars to lactic acid in an anaerobic environment. Salt is the key catalyst: it creates a hostile environment for harmful bacteria while allowing salt-tolerant Lactobacillus to thrive.</p>
     <h2>Sauerkraut: The Simplest Start</h2>
-    <p>Sauerkraut requires only two ingredients: cabbage and salt. Shred cabbage finely (a mandoline produces the most uniform results), weigh it, and add 2% of its weight in salt (20g salt per 1kg cabbage). Massage and squeeze the cabbage aggressively for 10–15 minutes until it releases abundant liquid. Pack tightly into a jar, pressing down so the liquid (brine) rises above the cabbage. If there isn't enough, add a small amount of 2% salt solution. Keep the cabbage submerged under the brine (a small bag of brine as a weight works perfectly), cover loosely to allow gas to escape, and leave at room temperature.</p>
-    <p>Within 24 hours, bubbles should appear — a sign of active fermentation. Taste daily after day 3. At day 5–7, you'll have mild sauerkraut; at day 14–21, it will be more sour and complex. When it tastes the way you like it, seal and refrigerate to halt fermentation.</p>
-    <h2>Kimchi: Korea's Living Heritage</h2>
-    <p>Kimchi is more complex than sauerkraut, incorporating napa cabbage (salted and rinsed rather than massaged) with a paste of Korean red pepper flakes (gochugaru), garlic, ginger, fish sauce or soy sauce, and optionally daikon radish, green onions, and other vegetables. The proportions vary enormously by region and family — there are hundreds of kimchi varieties, from the fiery standard baechu kimchi to milder water kimchi (mul kimchi) to radish cube kimchi (kkakdugi).</p>
-    <h2>Kombucha: The Fermented Tea</h2>
-    <p>Kombucha is made by fermenting sweet tea with a SCOBY (Symbiotic Culture of Bacteria and Yeast) — a rubbery disc of cellulose produced by the microorganisms that drive fermentation. Brew a large batch of black or green tea, dissolve sugar (roughly 1 cup per gallon), cool to room temperature, add your SCOBY and some starter kombucha, and leave covered with cloth for 7–14 days. The result is a tangy, slightly effervescent drink with a complex, vinegar-forward flavor that can be flavored with fruit, ginger, or herbs in a second fermentation.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>Lacto-fermentation uses salt and natural bacteria to create safe, self-preserving foods</li>
-        <li>The 2% salt rule (20g salt per 1kg vegetable) is the foundation of most vegetable ferments</li>
-        <li>Keeping vegetables submerged under brine is critical for safe fermentation</li>
-        <li>Fermentation time is adjustable: taste regularly and stop when you like the flavor</li>
-        <li>A live SCOBY or starter culture is required for kombucha; all else can be cultured naturally</li>
-        <li>Refrigeration halts fermentation — use it to store ferments at your preferred sourness</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Fermentation is a relationship between the cook and the invisible world of microorganisms that share our kitchens. It asks for patience and attention, and it returns flavors and nutrition that nothing else can produce. Once you begin fermenting, you start to see food differently — as living, dynamic, evolving rather than static. You begin to understand why every traditional food culture in the world has its ferments, its living foods, its preserved wealth of flavor. That understanding, once gained, fundamentally enriches how you cook and eat.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is it safe to ferment at home? <span>+</span></div><div class="faq-a">Yes, lacto-fermentation is extremely safe when done correctly. The acidic environment created by fermentation prevents pathogen growth. Use clean equipment, the correct salt ratio, and keep vegetables submerged in brine. Harmful ferments smell clearly bad — if in doubt, throw it out.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What type of salt should I use for fermentation? <span>+</span></div><div class="faq-a">Use non-iodized salt — sea salt, kosher salt, or pickling salt. Iodized table salt inhibits the beneficial bacteria needed for fermentation. The iodine that keeps table salt white and free-flowing is an antimicrobial agent that disrupts the fermentation culture.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why is my sauerkraut not producing enough liquid? <span>+</span></div><div class="faq-a">Massage more aggressively and for longer — the liquid comes from breaking down the cabbage's cell walls. Some cabbages are drier than others. If there's still not enough liquid after 15 minutes of massaging, add a small amount of 2% brine (1 tsp salt dissolved in 1 cup water) to ensure the cabbage stays submerged.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the white film that sometimes forms on top of my ferment? <span>+</span></div><div class="faq-a">This is Kahm yeast — a harmless, flat white film that can form on the surface of vegetable ferments. It doesn't affect flavor or safety significantly. Skim it off regularly and ensure your vegetables remain submerged. A foul smell or fuzzy (not flat) growth indicates something more problematic.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I get a SCOBY without knowing someone who brews kombucha? <span>+</span></div><div class="faq-a">Yes. Many health food stores sell SCOBYs, and they're readily available online. You can also grow a SCOBY from a bottle of unflavored, raw (unpasteurized) store-bought kombucha — add it to sweet tea and a SCOBY will form over 2–4 weeks.</div></div>
-    </div>`
+    <p>Sauerkraut requires only two ingredients: cabbage and salt. Shred cabbage finely, weigh it, and add 2% of its weight in salt. Massage and squeeze the cabbage aggressively for 10–15 minutes until it releases abundant liquid. Pack tightly into a jar, pressing down so the brine rises above the cabbage.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>Lacto-fermentation uses salt and natural bacteria to create safe, self-preserving foods</li><li>The 2% salt rule (20g salt per 1kg vegetable) is the foundation of most vegetable ferments</li><li>Keeping vegetables submerged under brine is critical for safe fermentation</li><li>Fermentation time is adjustable: taste regularly and stop when you like the flavor</li><li>Refrigeration halts fermentation — use it to store ferments at your preferred sourness</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Fermentation is a relationship between the cook and the invisible world of microorganisms that share our kitchens. It asks for patience and attention, and it returns flavors and nutrition that nothing else can produce.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is it safe to ferment at home? <span>+</span></div><div class="faq-a">Yes, lacto-fermentation is extremely safe when done correctly. The acidic environment created by fermentation prevents pathogen growth. Use clean equipment, the correct salt ratio, and keep vegetables submerged in brine.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What type of salt should I use for fermentation? <span>+</span></div><div class="faq-a">Use non-iodized salt — sea salt, kosher salt, or pickling salt. Iodized table salt inhibits the beneficial bacteria needed for fermentation.</div></div></div>`
   },
   {
     title: "The Art of Salad Dressings: Beyond Bottled",
@@ -1535,43 +1222,16 @@ const blogs = [
     meta: "Aisha Okonkwo • January 2026",
     date: "Jan 2026",
     readTime: "8 min read",
-    content: `<p>The bottled salad dressing industry is worth billions of dollars. And it thrives on a secret that dressing manufacturers would prefer you not discover: making a far superior salad dressing at home takes approximately 90 seconds and costs a fraction of the bottled alternative. Once you internalize the basic formula of a good vinaigrette and begin varying it with different oils, acids, and aromatics, you'll have a repertoire of dozens of dressings at your mental fingertips — no measuring required.</p>
+    content: `<p>Making a far superior salad dressing at home takes approximately 90 seconds. Once you internalize the basic formula of a good vinaigrette and begin varying it, you'll have a repertoire of dozens of dressings at your fingertips.</p>
     <h2>The Fundamental Vinaigrette Formula</h2>
-    <p>A classic French vinaigrette is a 3:1 ratio of oil to acid (vinegar or citrus juice), with salt, a touch of mustard (as an emulsifier that holds the dressing together), and optionally a small amount of sweetness to balance the acid. That's all a vinaigrette is. Three tablespoons of good olive oil, one tablespoon of red wine vinegar, a teaspoon of Dijon mustard, a pinch of salt, and a half-teaspoon of honey. Whisk vigorously or shake in a jar, and you have a dressing that beats anything from a bottle.</p>
-    <h2>Choosing Your Oil</h2>
-    <p>The oil is the largest component and the dominant flavor, so choose carefully. Extra-virgin olive oil is the classic choice for Mediterranean-style salads — fruity, peppery, and rich. For Asian-inspired dressings, toasted sesame oil (used sparingly — it's intense) or a neutral oil like grapeseed gives a cleaner canvas. Walnut oil, hazelnut oil, or pistachio oil bring distinctive nuttiness that can transform a simple salad into something remarkable. Store specialty oils in the refrigerator to prevent rancidity.</p>
+    <p>A classic French vinaigrette is a 3:1 ratio of oil to acid (vinegar or citrus juice), with salt, a touch of mustard (as an emulsifier), and optionally a small amount of sweetness. Three tablespoons of good olive oil, one tablespoon of red wine vinegar, a teaspoon of Dijon mustard, a pinch of salt, and a half-teaspoon of honey. Whisk and you have a dressing that beats anything from a bottle.</p>
     <h2>The Acid Spectrum</h2>
-    <p>The acid gives a dressing its brightness and balances the richness of the oil. Different acids create dramatically different flavor profiles: red wine vinegar (bold, slightly tannic, perfect for robust salads), white wine vinegar (milder, more delicate, excellent for lighter greens), sherry vinegar (complex and slightly sweet, excellent for roasted vegetable salads), apple cider vinegar (fruity, slightly sweet, versatile), balsamic vinegar (sweet and syrupy — use sparingly and combine with a more acidic vinegar), and citrus (lemon, lime, orange — brighter and more fragrant than vinegar, perfect for herb-heavy or fruit salads).</p>
-    <h2>Building Complexity: Aromatics and Add-ins</h2>
-    <p>Beyond the base formula, aromatics and additional ingredients transform a simple vinaigrette into a signature dressing. Minced shallot (milder and sweeter than raw onion) is the classic addition. Fresh garlic (use a microplane for the finest texture) adds punch. Fresh herbs — tarragon, basil, chives, dill, cilantro — dramatically shift the character of a dressing. A teaspoon of miso paste adds savory umami depth and acts as an additional emulsifier. Tahini, yogurt, or mayonnaise create creamy dressings without the need for dairy.</p>
-    <h2>Creamy Dressings</h2>
-    <p>Creamy dressings — Caesar, ranch, tahini, blue cheese — follow the same fundamental principle (balance fat, acid, salt, with supporting aromatics) but use an emulsified base rather than a clear vinaigrette. Caesar dressing, the most iconic, combines garlic, anchovy, lemon, Worcestershire, Dijon, egg yolk (for emulsification), and olive oil into a creamy, intensely savory dressing that transforms romaine lettuce into something addictive. Making it from scratch takes five minutes and produces a result incomparable to any jar.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>The base vinaigrette formula is 3:1 oil to acid, with salt and mustard</li>
-        <li>Mustard (Dijon) acts as an emulsifier, keeping oil and acid from separating</li>
-        <li>Different acids (red wine, sherry, citrus) create dramatically different flavor profiles</li>
-        <li>Always dress salads at the last moment to prevent wilting</li>
-        <li>Season the greens first with salt before adding dressing for even seasoning</li>
-        <li>Miso, tahini, or yogurt can replace or supplement oil for creamy dressings with more complexity</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Once you internalize the vinaigrette formula — three parts oil, one part acid, balance with salt and sweetness, emulsify with mustard — you never need a recipe again. You can taste, adjust, and create on the fly. The salad you make after mastering homemade dressings will bear no resemblance to the salad you made before. It will be brighter, more complex, and perfectly seasoned. And it will cost almost nothing to make. That is one of cooking's simplest, most satisfying victories.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why does my homemade dressing separate? <span>+</span></div><div class="faq-a">Oil and water (vinegar) don't naturally mix — they need an emulsifier. Mustard, honey, egg yolk, miso, or tahini all work as emulsifiers. Even with an emulsifier, most vinaigrettes will separate over time; simply shake or whisk before using. Creamy dressings with egg yolk are more stable.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long does homemade dressing last? <span>+</span></div><div class="faq-a">Vinaigrettes without fresh garlic or shallot can last 2 weeks in the refrigerator. Dressings with fresh herbs, shallot, or garlic are best within 3–5 days. Creamy dressings with egg yolk should be used within 3 days.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I dress the salad ahead of time? <span>+</span></div><div class="faq-a">Almost never. Acid wilts greens quickly through osmosis. Dress sturdy greens (kale, Brussels sprout leaves, chopped romaine) up to 30 minutes ahead. Dress delicate greens (arugula, butter lettuce, microgreens) only seconds before serving.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What's the secret to a restaurant-quality Caesar? <span>+</span></div><div class="faq-a">The anchovy is non-negotiable — it provides the umami depth that makes Caesar taste like Caesar. Use high-quality anchovy fillets packed in olive oil. Grate the Parmesan with a Microplane for the finest texture, and use freshly squeezed lemon. A whole egg yolk (not just the white) gives the richest emulsification.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How can I make my salad more filling? <span>+</span></div><div class="faq-a">Add protein (grilled chicken, hard-boiled eggs, canned chickpeas, cubed firm tofu), healthy fats (avocado, nuts, cheese), and complex carbs (roasted sweet potato, cooked grains like farro or quinoa). A dressed grain bowl can be just as satisfying as a full meal when built with intention.</div></div>
-    </div>`
+    <p>Different acids create dramatically different flavor profiles: red wine vinegar (bold, slightly tannic), white wine vinegar (milder, more delicate), sherry vinegar (complex and slightly sweet), apple cider vinegar (fruity), and citrus (brighter and more fragrant than vinegar).</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>The base vinaigrette formula is 3:1 oil to acid, with salt and mustard</li><li>Mustard (Dijon) acts as an emulsifier, keeping oil and acid from separating</li><li>Different acids create dramatically different flavor profiles</li><li>Always dress salads at the last moment to prevent wilting</li><li>Season the greens first with salt before adding dressing for even seasoning</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Once you internalize the vinaigrette formula — three parts oil, one part acid, balance with salt and sweetness, emulsify with mustard — you never need a recipe again.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why does my homemade dressing separate? <span>+</span></div><div class="faq-a">Oil and water don't naturally mix — they need an emulsifier. Mustard, honey, egg yolk, miso, or tahini all work as emulsifiers. Simply shake or whisk before using.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I dress the salad ahead of time? <span>+</span></div><div class="faq-a">Almost never. Acid wilts greens quickly through osmosis. Dress sturdy greens up to 30 minutes ahead. Dress delicate greens only seconds before serving.</div></div></div>`
   },
   {
     title: "Mastering Stocks and Broths from Scratch",
@@ -1581,63 +1241,41 @@ const blogs = [
     meta: "Marcus Chen • February 2026",
     date: "Feb 2026",
     readTime: "11 min read",
-    content: `<p>Auguste Escoffier called stock the foundation of all cooking — "la base de toute cuisine." And he was right. A good stock, made from scratch with proper technique, is a fundamentally different substance from the carton broths available at the supermarket. It is richer, more gelatinous, more deeply flavored, and more versatile. It transforms sauces from flat to silky, braises from adequate to extraordinary, and soups from satisfying to transcendent. Every cook who learns to make stock properly takes a significant step toward cooking the way professionals cook.</p>
+    content: `<p>Auguste Escoffier called stock the foundation of all cooking. A good stock, made from scratch with proper technique, is a fundamentally different substance from the carton broths available at the supermarket.</p>
     <h2>The Difference Between Stock and Broth</h2>
-    <p>Stock is made primarily from bones, which release collagen (converted to gelatin during cooking) that gives a properly made stock a glossy, rich body. When chilled, a good stock should set to a gel-like consistency. Broth is made primarily from meat rather than bones and is thinner and lighter. Most commercial products labeled "broth" or "stock" are, in practice, very thin, sodium-heavy liquids that bear little resemblance to properly made stock. For cooking purposes, treat them as an emergency measure, not a regular ingredient.</p>
+    <p>Stock is made primarily from bones, which release collagen (converted to gelatin during cooking). When chilled, a good stock should set to a gel-like consistency. Broth is made primarily from meat rather than bones and is thinner and lighter.</p>
     <h2>Chicken Stock: The Most Versatile Foundation</h2>
-    <p>Chicken stock begins with bones — either a chicken carcass from a roasted chicken, raw chicken bones (backs, necks, and wings are cheapest and most gelatin-rich), or a combination. Add a mirepoix: roughly chopped onion, carrot, and celery in a 2:1:1 ratio. Add a bouquet garni: parsley stems, thyme sprigs, a bay leaf, and peppercorns tied together or in a cheesecloth bundle. Cover with cold water (always start with cold water — this promotes the gradual release of proteins that can then be skimmed rather than incorporating them into the stock).</p>
-    <p>Bring slowly to a bare simmer — never a boil. Skim the grey foam that rises during the first 15–20 minutes. Maintain at a gentle simmer (just a few bubbles breaking the surface) for 4–6 hours. Too vigorous a simmer will produce a cloudy stock; too low and you won't extract enough gelatin. Strain through a fine mesh strainer lined with cheesecloth. Cool rapidly (an ice bath is ideal for safety) and refrigerate. The fat will solidify on top and can be lifted off.</p>
-    <h2>Brown Stocks: Depth Through Roasting</h2>
-    <p>Brown stocks (veal, beef, and brown chicken) add a crucial step before simmering: roasting the bones until deeply caramelized. This Maillard reaction on the bones produces hundreds of flavor compounds that give brown stocks their rich, complex, mahogany character. Toss bones with a little oil and roast at 425°F (220°C) for 45–60 minutes until deeply brown. Also roast the mirepoix vegetables until caramelized. Deglaze the roasting pan with water or wine to capture the fond (caramelized drippings), then proceed with simmering. The result is a stock of almost incomparable depth.</p>
+    <p>Chicken stock begins with bones. Add a mirepoix: roughly chopped onion, carrot, and celery in a 2:1:1 ratio, plus a bouquet garni. Cover with cold water — always start cold. Bring slowly to a bare simmer, never a boil. Skim the grey foam during the first 15–20 minutes. Maintain at a gentle simmer for 4–6 hours.</p>
     <h2>Fish and Shellfish Stock</h2>
-    <p>Fish stock is the most delicate and the fastest of the classical stocks — too long cooking produces bitterness. Use fish bones from white, non-oily fish (salmon bones are too fatty and flavorful). Sweat the mirepoix in butter, add the fish bones, then add cold water and white wine. Simmer for exactly 20–25 minutes — no more. Strain immediately. Fish stock can be used as-is for chowders and fish soups, or reduced to a "fumet" — a concentrated essence of oceanic flavor that is the base of classic Normandy-style fish sauces.</p>
-    <h2>Storing and Using Your Stock</h2>
-    <p>Cool stock rapidly (within 2 hours) and refrigerate for up to 5 days or freeze for 6 months. The ideal storage format for frozen stock is ice cube trays — once solid, transfer to bags. These "stock cubes" (not the bouillon kind) allow you to add precise amounts to dishes without defrosting a whole container. Reduce stocks further before freezing to save space: a stock reduced by half has the same gelatin and flavor but takes up half the freezer space.</p>
-
-    <div class="key-takeaways">
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>Stock is bone-based (gelatin-rich) while broth is meat-based (thinner) — they're different things</li>
-        <li>Always start stock in cold water and bring to a gentle simmer — never boil</li>
-        <li>Skim the grey foam during the first 20 minutes for a clearer, cleaner stock</li>
-        <li>Brown stocks require roasting bones until deeply caramelized before simmering</li>
-        <li>Fish stock cooks for only 20–25 minutes — longer makes it bitter</li>
-        <li>Freeze stock in ice cube trays for convenient portioned access</li>
-      </ul>
-    </div>
-
-    <div class="conclusion-box">
-      <h3>Conclusion</h3>
-      <p>Making stock is not a glamorous cooking task. It requires time, bones, and patience — none of which are in short supply, even for busy home cooks, if you plan around a roast chicken weekend or a Sunday braising session. But the reward is substantial: a freezer stocked with good chicken, veal, or fish stock is one of the most valuable culinary resources you can possess. Every sauce you make will be better. Every braise will be richer. Every risotto will have depth that carton stock can't provide. Stock is the foundation, and a good foundation changes everything built upon it.</p>
-    </div>
-
-    <div class="faq-section">
-      <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I add salt to my stock? <span>+</span></div><div class="faq-a">No. Stock is a foundational ingredient that will be reduced, combined, and seasoned later. Adding salt upfront means any reduction amplifies the saltiness to potentially unworkable levels. Season dishes at the end, not the stock at the beginning.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why does my stock not gel when chilled? <span>+</span></div><div class="faq-a">Insufficient gelatin content. Use more bones (especially collagen-rich ones like chicken feet, veal knuckles, pork trotters), ensure a low simmer (not a rolling boil which damages gelatin), and cook for the full recommended time. A stock that doesn't gel can still be used but lacks the body of a properly made stock.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I make stock in a slow cooker? <span>+</span></div><div class="faq-a">Yes, and it's excellent — set it on low for 10–12 hours for chicken stock. The consistent low temperature produces a clean, clear stock with good gelatin extraction. You won't get the browning possible in a stovetop pot, but it's very hands-off and reliable.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is demi-glace and how is it different from stock? <span>+</span></div><div class="faq-a">Demi-glace is veal stock that has been reduced by 75–80% until it is thick, syrupy, and intensely flavored. A tablespoon contains the flavor of a cup of stock. It's the ultimate concentrated cooking resource — add a spoonful to a pan sauce for instant, professional-level depth.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What vegetables should I avoid in stock? <span>+</span></div><div class="faq-a">Avoid starchy vegetables (potatoes, parsnips in large amounts) which cloud the stock, brassicas (broccoli, cauliflower, cabbage) which turn sulfurous after long cooking, and beets which will turn your stock pink. Keep to the classic mirepoix (onion, carrot, celery) and neutral aromatics (parsley, thyme, bay, peppercorn).</div></div>
-    </div>`
+    <p>Fish stock is the fastest of the classical stocks — simmer for exactly 20–25 minutes — no more. Too long cooking produces bitterness. Fish stock can be used as-is for chowders, or reduced to a concentrated fumet.</p>
+    <div class="key-takeaways"><h3>Key Takeaways</h3><ul><li>Stock is bone-based (gelatin-rich) while broth is meat-based (thinner)</li><li>Always start stock in cold water and bring to a gentle simmer — never boil</li><li>Skim the grey foam during the first 20 minutes for a clearer stock</li><li>Brown stocks require roasting bones until deeply caramelized before simmering</li><li>Fish stock cooks for only 20–25 minutes — longer makes it bitter</li><li>Freeze stock in ice cube trays for convenient portioned access</li></ul></div>
+    <div class="conclusion-box"><h3>Conclusion</h3><p>Making stock is not a glamorous cooking task. But the reward is substantial: a freezer stocked with good chicken, veal, or fish stock is one of the most valuable culinary resources you can possess.</p></div>
+    <div class="faq-section"><h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I add salt to my stock? <span>+</span></div><div class="faq-a">No. Stock is a foundational ingredient that will be reduced, combined, and seasoned later. Adding salt upfront means any reduction amplifies the saltiness to potentially unworkable levels.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I make stock in a slow cooker? <span>+</span></div><div class="faq-a">Yes, and it's excellent — set it on low for 10–12 hours for chicken stock. The consistent low temperature produces a clean, clear stock with good gelatin extraction.</div></div></div>`
   },
   {
     title: "The Perfect Roast Chicken: A Simple Classic",
     category: "Classic Recipes",
     image: "https://images.unsplash.com/photo-1598103442097-8b74394b95c7?w=800&q=80",
     excerpt: "Roast chicken is the one dish every cook should be able to make perfectly. Here's the technique that produces crackly skin and juicy meat every single time.",
-    meta: "Elena Marchetti • March 2026",
+    meta: "Maria Kanwal • March 2026",
     date: "Mar 2026",
     readTime: "9 min read",
-    content: `<p>Roast chicken has been called the truest test of a cook. Julia Child famously said that if you learn to make a perfect roast chicken, you will always have something extraordinary to serve. It is perhaps the ideal home-cooking dish: simple in concept, achievable with basic equipment, forgiving in timing, and yielding an incredibly satisfying result that can anchor a dinner party or a quiet family Sunday with equal grace. Yet for a dish so seemingly simple, roast chicken is plagued by common errors that produce dry breast meat, flabby skin, and undercooked legs. The correct technique eliminates all of these problems.</p>
+    content: `<img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c7?w=900&q=80" alt="Perfect golden roast chicken fresh from the oven" style="width:100%;border-radius:14px;margin:0 0 2rem;object-fit:cover;max-height:360px;">
+    <p>Roast chicken has been called the truest test of a cook. Julia Child famously said that if you learn to make a perfect roast chicken, you will always have something extraordinary to serve. It is perhaps the ideal home-cooking dish: simple in concept, achievable with basic equipment, forgiving in timing, and yielding an incredibly satisfying result that can anchor a dinner party or a quiet family Sunday with equal grace. Yet for a dish so seemingly simple, roast chicken is plagued by common errors that produce dry breast meat, flabby skin, and undercooked legs. The correct technique eliminates all of these problems.</p>
+    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=900&q=80" alt="Salting and seasoning chicken for dry brine" style="width:100%;border-radius:14px;margin:1.5rem 0;object-fit:cover;max-height:280px;">
     <h2>Dry Brining: The Most Important Step</h2>
     <p>The single most impactful technique improvement for roast chicken is dry brining: generously salting the bird (inside the cavity, under the skin over the breasts, and all over the outside) and leaving it uncovered in the refrigerator for 24–72 hours before roasting. This seemingly simple step accomplishes several things simultaneously. First, the salt draws out moisture by osmosis, which then dissolves the salt and is reabsorbed — creating a more deeply seasoned bird throughout. Second, the overnight air-drying in the refrigerator removes surface moisture, which is the enemy of crispy skin. Dry skin browns; wet skin steams.</p>
     <h2>Trussing: Should You or Shouldn't You?</h2>
-    <p>Culinary school tradition dictates trussing — tying the legs together and wings against the body — for a more compact, evenly-shaped bird that presents beautifully. Practically speaking, trussing creates a problem: the thighs cook more slowly than the breast, and trussing makes this gap worse by tucking the slowest-cooking parts into the body where they're insulated from direct heat. Many modern cooks (and cookbook authors like Thomas Keller and Judy Rodgers) advocate for untrussed roasting, leaving the legs played out to maximize their exposure to heat.</p>
+    <p>Culinary school tradition dictates trussing — tying the legs together and wings against the body. Practically speaking, trussing creates a problem: the thighs cook more slowly than the breast, and trussing makes this gap worse by tucking the slowest-cooking parts into the body where they're insulated from direct heat. Many modern cooks advocate for untrussed roasting, leaving the legs splayed out to maximize their exposure to heat.</p>
     <h2>The Roasting Setup</h2>
-    <p>Preheat your oven to 425°F (220°C) with a cast iron skillet or roasting pan inside. High heat is essential for browning and crackly skin; a preheated pan gives the bottom of the chicken an immediate sear rather than allowing it to steam in its own juices. Remove the cold chicken from the refrigerator 30–60 minutes before cooking to take the chill off. Rub the skin with a thin coat of butter or olive oil (this promotes even browning), stuff the cavity loosely with aromatics — half a lemon, a head of garlic split across the equator, fresh thyme and rosemary.</p>
+    <p>Preheat your oven to 425°F (220°C) with a cast iron skillet or roasting pan inside. High heat is essential for browning and crackly skin; a preheated pan gives the bottom of the chicken an immediate sear. Remove the cold chicken from the refrigerator 30–60 minutes before cooking to take the chill off. Rub the skin with a thin coat of butter or olive oil, stuff the cavity loosely with aromatics — half a lemon, a head of garlic split across the equator, fresh thyme and rosemary.</p>
+    <img src="https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?w=900&q=80" alt="Chicken roasting in cast iron skillet in oven" style="width:100%;border-radius:14px;margin:1.5rem 0;object-fit:cover;max-height:280px;">
     <h2>Roasting and Resting</h2>
-    <p>Place the chicken breast-side up in the hot pan. Roast for 15 minutes per pound (roughly 60–75 minutes for a 4–5 lb bird) plus an additional 15 minutes. An instant-read thermometer inserted into the thickest part of the thigh (not touching bone) should read 165°F (74°C). If the breast is browning too quickly, tent with foil. If the legs are not yet done when the breast is, remove the breast from the oven and let it rest while the legs finish — or cut the legs off and return them to the oven.</p>
-    <p>Resting is non-negotiable: 15–20 minutes loosely tented with foil. The juices redistribute, the internal temperature equalizes, and the meat firms slightly to produce clean, elegant slices. Carve at the table if you can — it is a genuinely satisfying performance, and the aroma as you cut through that golden skin is one of cooking's greatest pleasures.</p>
+    <p>Place the chicken breast-side up in the hot pan. Roast for 15 minutes per pound (roughly 60–75 minutes for a 4–5 lb bird) plus an additional 15 minutes. An instant-read thermometer inserted into the thickest part of the thigh (not touching bone) should read 165°F (74°C). If the breast is browning too quickly, tent with foil.</p>
+    <p>Resting is non-negotiable: 15–20 minutes loosely tented with foil. The juices redistribute, the internal temperature equalizes, and the meat firms slightly to produce clean, elegant slices. Carve at the table if you can — it is a genuinely satisfying performance.</p>
+    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900&q=80" alt="Rich golden pan sauce from chicken drippings" style="width:100%;border-radius:14px;margin:1.5rem 0;object-fit:cover;max-height:280px;">
     <h2>The Pan Drippings</h2>
     <p>Never discard the pan drippings. They are golden, intensely flavored, and the base of an extraordinary quick pan sauce. Pour off most of the fat, deglaze the pan over high heat with white wine, chicken stock, or a combination, scraping up all the caramelized fond from the bottom. Reduce by half, taste, adjust seasoning, finish with a knob of cold butter swirled in off the heat for gloss and richness. Serve alongside the carved chicken.</p>
 
@@ -1655,16 +1293,16 @@ const blogs = [
 
     <div class="conclusion-box">
       <h3>Conclusion</h3>
-      <p>The perfect roast chicken asks very little of the cook: a little advance planning (the dry brine), a preheated oven, a hot pan, and a thermometer. In return, it gives everything: a golden, crackling bird that fills the kitchen with a smell that is among the most universally comforting in the world. This is the dish to make when you want to impress someone without appearing to try, when you want the pleasure of a meal that feels substantial and complete, when you want to cook something that connects you to generations of cooks before you who made the same dish, the same way, and felt the same quiet satisfaction when they placed it on the table.</p>
+      <p>The perfect roast chicken asks very little of the cook: a little advance planning (the dry brine), a preheated oven, a hot pan, and a thermometer. In return, it gives everything: a golden, crackling bird that fills the kitchen with a smell that is among the most universally comforting in the world. This is the dish to make when you want to impress someone without appearing to try.</p>
     </div>
 
     <div class="faq-section">
       <h2 class="faq-title">Frequently Asked Questions</h2>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What size chicken should I buy for roasting? <span>+</span></div><div class="faq-a">3.5–4.5 lbs (1.6–2kg) is the ideal range for a roast chicken. Smaller birds cook quickly but can dry out; larger birds (over 5 lbs) take so long that the breast often overcooks before the legs are done. If serving more people, roast two smaller chickens simultaneously rather than one large one.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I baste the chicken during roasting? <span>+</span></div><div class="faq-a">Basting adds fat and flavor to the exterior but requires opening the oven repeatedly, losing heat. For crispy skin, minimal basting is better. A good dry brine and proper high heat produce superior results without basting. If you do baste, do it no more than twice, and quickly.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I roast vegetables with the chicken? <span>+</span></div><div class="faq-a">Yes, but be aware that vegetables under the chicken will steam and become tender rather than caramelize. Cut root vegetables into even chunks and place around the chicken (not under it) for best browning. Potatoes, carrots, fennel, and onions all work beautifully and absorb the delicious chicken fat.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why is my chicken skin not crispy? <span>+</span></div><div class="faq-a">The three enemies of crispy skin are moisture, low heat, and oil applied too thickly. Dry the bird thoroughly (dry brine overnight uncovered in fridge), roast at 425°F minimum, and use only a thin layer of fat on the skin. Soggy pan juices pooling under the chicken also steam the skin — elevate the chicken on a rack if possible.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What do I do with leftover roast chicken? <span>+</span></div><div class="faq-a">The carcass becomes chicken stock. The leftover meat works in chicken salad, tacos, pasta, risotto, soups, and sandwiches. Cold roast chicken, pulled and seasoned with mayonnaise, Dijon, and tarragon, makes one of the best lunches imaginable. Nothing is wasted from a properly roasted chicken.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What size chicken should I buy for roasting? <span>+</span></div><div class="faq-a">3.5–4.5 lbs (1.6–2kg) is the ideal range. Smaller birds cook quickly but can dry out; larger birds take so long that the breast often overcooks before the legs are done. If serving more people, roast two smaller chickens simultaneously.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Should I baste the chicken during roasting? <span>+</span></div><div class="faq-a">Basting adds fat and flavor to the exterior but requires opening the oven repeatedly, losing heat. A good dry brine and proper high heat produce superior results without basting.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I roast vegetables with the chicken? <span>+</span></div><div class="faq-a">Yes — cut root vegetables into even chunks and place around the chicken (not under it) for best browning. Potatoes, carrots, fennel, and onions all work beautifully.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Why is my chicken skin not crispy? <span>+</span></div><div class="faq-a">The three enemies of crispy skin are moisture, low heat, and oil applied too thickly. Dry the bird thoroughly (dry brine overnight uncovered in fridge), roast at 425°F minimum, and use only a thin layer of fat on the skin.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What do I do with leftover roast chicken? <span>+</span></div><div class="faq-a">The carcass becomes chicken stock. The leftover meat works in chicken salad, tacos, pasta, risotto, soups, and sandwiches. Cold roast chicken with mayonnaise, Dijon, and tarragon makes one of the best lunches imaginable.</div></div>
     </div>`
   }
 ];
